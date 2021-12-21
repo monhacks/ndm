@@ -1,6 +1,6 @@
 MapNames:
 PalletTownName:
-	db "PALLET TOWN@"
+	db "CAMP PALLET@"
 ViridianCityName:
 	db "VIRIDIAN CITY@"
 PewterCityName:
@@ -22,43 +22,43 @@ IndigoPlateauName:
 SaffronCityName:
 	db "SAFFRON CITY@"
 Route1Name:
-	db "ROUTE 1@"
+	db "PALLET NATURE TRAIL@"
 Route2Name:
-	db "ROUTE 2@"
+	db "VIRIDIAN MEADOW@"
 Route3Name:
-	db "ROUTE 3@"
+	db "PEWTER FOOTHILLS@"
 Route4Name:
-	db "ROUTE 4@"
+	db "CERULEAN RIVER@"
 Route5Name:
-	db "ROUTE 5@"
+	db "SAFFRON MEADOW@"
 Route6Name:
 	db "ROUTE 6@"
 Route7Name:
-	db "ROUTE 7@"
+	db "SAFFRON APARTMENTS@"
 Route8Name:
-	db "ROUTE 8@"
+	db "SAFFRON SUBURBS@"
 Route9Name:
-	db "ROUTE 9@"
+	db "CERULEAN VALLEY@"
 Route10Name:
-	db "ROUTE 10@"
+	db "LAVENDER GULF@"
 Route11Name:
-	db "ROUTE 11@"
+	db "VERMILION STEPPE@"
 Route12Name:
-	db "ROUTE 12@"
+	db "PORT LAVENDER@"
 Route13Name:
-	db "ROUTE 13@"
+	db "FUCHSIA MARSH@"
 Route14Name:
 	db "ROUTE 14@"
 Route15Name:
-	db "ROUTE 15@"
+	db "FUCHSIA PLAINS@"
 Route16Name:
-	db "ROUTE 16@"
+	db "CELADON BAY@"
 Route17Name:
-	db "ROUTE 17@"
+	db "VERMILION BAY@"
 Route18Name:
-	db "ROUTE 18@"
+	db "FUCHSIA BEACH@"
 Route19Name:
-	db "SEA ROUTE 19@"
+	db "KANTO SEA@"
 Route20Name:
 	db "SEA ROUTE 20@"
 Route21Name:
@@ -109,3 +109,5 @@ HauntedHouseName:
 	db "ABANDONED@"
 RemoteIslandName:
 	db "REMOTE ISLAND@"
+ValleyName:
+	db "PEWTER VALLEY@"

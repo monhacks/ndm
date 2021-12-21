@@ -85,18 +85,19 @@ StatusScreen:
 	call ClearScreen
 	call UpdateSprites
 	call LoadHpBarAndStatusTilePatterns
+
 	ld de, BattleHudTiles1  ; source
 	ld hl, vChars2 + $6d0 ; dest
 	lb bc, BANK(BattleHudTiles1), $03
 	call CopyVideoDataDouble ; ·│ :L and halfarrow line end
-	ld de, BattleHudTiles2
-	ld hl, vChars2 + $780
-	lb bc, BANK(BattleHudTiles2), $01
-	call CopyVideoDataDouble ; │
-	ld de, BattleHudTiles3
-	ld hl, vChars2 + $760
-	lb bc, BANK(BattleHudTiles3), $02
-	call CopyVideoDataDouble ; ─┘
+	;ld de, BattleHudTiles2
+	;ld hl, vChars2 + $780
+	;lb bc, BANK(BattleHudTiles2), $01
+	;call CopyVideoDataDouble ; │
+	;ld de, BattleHudTiles3
+	;ld hl, vChars2 + $760
+	;lb bc, BANK(BattleHudTiles3), $02
+	;call CopyVideoDataDouble ; ─┘
 	ld de, PTile
 	ld hl, vChars2 + $720
 	lb bc, BANK(PTile), (PTileEnd - PTile) / $8
@@ -105,9 +106,9 @@ StatusScreen:
 	push af
 	xor a
 	ld [hTilesetType], a
-	coord hl, 19, 1
+	coord hl, 8, 0
 	lb bc, 4, 10
-	call DrawLineBox ; Draws the box around name, HP and status
+	call TextBoxBorder ; Draws the box around name, HP and status
 	coord hl, 1, 0
 	ld [hl], "№"
 	inc hl
@@ -273,7 +274,7 @@ OKText:
 DrawLineBox:
 	ld de, SCREEN_WIDTH ; New line
 .PrintVerticalLine
-	ld [hl], $78 ; │
+	;ld [hl], $78 ; │
 	add hl, de
 	dec b
 	jr nz, .PrintVerticalLine
@@ -334,36 +335,35 @@ PrintStatsBox:
 	call PrintStat
 	
 	; DVS OMG 
-	lb bc, 1, 2	; print a 1-bit
+	lb bc, 1, 2	; print a 1-bit	
 	
-	
-	coord hl, 15, 10 	
+	coord hl, 14, 10 	
 	
 	ld a, [wLoadedMonDVs]
 	and %11110000
 	swap a
 	ld [wPlaceHolderDVs], a
 	ld de, wPlaceHolderDVs
-	call PrintStat		
+	call PrintStars		
 	
 	ld a, [wLoadedMonDVs]
 	and $f
 	ld [wPlaceHolderDVs+1], a
 	ld de, wPlaceHolderDVs+1
-	call PrintStat	
+	call PrintStars	
 	
 	ld a, [wLoadedMonDVs+1]
 	and %11110000
 	swap a
 	ld [wPlaceHolderDVs+2], a
 	ld de, wPlaceHolderDVs+2
-	call PrintStat		
+	call PrintStars		
 	
 	ld a, [wLoadedMonDVs+1]
 	and $f
 	ld [wPlaceHolderDVs+3], a
 	ld de, wPlaceHolderDVs+3	
-	call PrintNumber
+	call PrintStars
 	
 	;deep inhale ok for HP
 	push bc
@@ -393,10 +393,10 @@ PrintStatsBox:
 	
 	ld [wPlaceHolderDVs+4], a	
 	pop bc
-	coord hl, 15, 9	
+	coord hl, 14, 9	
 	ld de, wPlaceHolderDVs+4	
 	
-	jp PrintNumber
+	jp PrintStars
 
 PrintStat:
 	push hl
@@ -406,14 +406,55 @@ PrintStat:
 	add hl, de ; move hl down two screen lines
 	ret
 
+PrintStars:
+	push hl
+	; de is the current DV.
+	; a is the current DV
+	; hl is where to print the character.
+	ld a, [de]
+	inc a
+	sra a
+.starbarLoop
+	cp 2
+	jr nc, .twobar
+	cp 1
+	jr z, .onebar
+	cp 0
+	jr z, .starbarend
+.onebar
+	ld [hl], "<ONEBAR>"
+	inc hl
+	jr .starbarend	
+.twobar
+	ld [hl], "<TWOBAR>"
+	inc hl
+	sub a, 2
+	jr .starbarLoop
+.starbarend		
+	pop hl
+	ld de, SCREEN_WIDTH
+	add hl, de ; move hl down a screen line
+	ret
+
 StatsText:
-	db   "Max HP      (  )"
-	next "Defense     (  )"
-	next "Special     (  )@"
+	db   "Max HP      <NB><NB><NB><NB>"
+	next "Defense     <NB><NB><NB><NB>"
+	next "Special     <NB><NB><NB><NB>@"
 	
 StatsText2: ; alternates because dumb
-	db 	 "Attack      (  )"
-	next "Speed       (  )@"
+	db 	 "Attack      <NB><NB><NB><NB>"
+	next "Speed       <NB><NB><NB><NB>@"
+
+
+;StatsText:
+;	db   "Max HP      (  )"
+;	next "Defense     (  )"
+;	next "Special     (  )@"
+	
+;StatsText2: ; alternates because dumb
+	;db 	 "Attack      (  )"
+	;next "Speed       (  )@"
+
 
 StatusScreen2:
 	ld a, [hTilesetType]
@@ -430,10 +471,10 @@ StatusScreen2:
 	call CopyData
 	callab FormatMovesString
 	coord hl, 9, 2
-	lb bc, 2, 10
+	lb bc, 3, 10
 	call ClearScreenArea ; Clear under name
-	coord hl, 19, 3
-	ld [hl], $78
+	;coord hl, 19, 3
+	;ld [hl], $78
 	coord hl, 0, 8
 	ld b, 8
 	ld c, 18
@@ -447,7 +488,7 @@ StatusScreen2:
 	ld a, $4
 	sub c
 	ld b, a ; Number of moves ?
-	coord hl, 17, 10
+	coord hl, 17, 9
 	ld de, SCREEN_WIDTH * 2
 	ld a, $72 ; special P tile id
 	call StatusScreen_PrintPP ; Print "PP"
@@ -459,7 +500,7 @@ StatusScreen2:
 	call StatusScreen_PrintPP ; Fill the rest with --
 .InitPP
 	ld hl, wLoadedMonMoves
-	coord de, 10, 10
+	coord de, 14, 9
 	ld b, 0
 .PrintPP
 	ld a, [hli]
@@ -489,16 +530,28 @@ StatusScreen2:
 	ld h, d
 	ld l, e
 	push hl
-	ld de, wStatusScreenCurrentPP
-	lb bc, 1, 2
-	call PrintNumber
-	ld a, "/"
-	ld [hli], a
+	;ld de, wStatusScreenCurrentPP
+	;lb bc, 1, 2
+	;call PrintNumber
+	;ld a, " "
 	ld de, wMaxPP
 	lb bc, 1, 2
 	call PrintNumber
+	
 	pop hl
-	ld de, SCREEN_WIDTH * 2
+	ld de, 8
+	add hl, de
+	
+	ld [hl], $75
+	inc hl
+	ld de, wMovePower
+	lb bc, 1, 3
+	call PrintNumber
+	inc hl
+	ld de, StatusScreenPowText
+	call PlaceString
+	
+	ld de, SCREEN_WIDTH + 7
 	add hl, de
 	ld d, h
 	ld e, l
@@ -519,7 +572,7 @@ StatusScreen2:
 	inc a
 	ld [wLoadedMonLevel], a ; Increase temporarily if not 100
 .Level100
-	coord hl, 14, 4
+	coord hl, 13, 3
 	ld [hl], $70 ; 1-tile "to"
 	inc hl
 	inc hl
@@ -584,7 +637,10 @@ CalcExpToLevelUp:
 	ret
 
 StatusScreenExpText:
-	db   "NEXT LEVEL@"
+	db   "EXP@"
+	
+StatusScreenPowText:
+	db   "power@"
 
 StatusScreen_ClearName:
 	ld bc, 10

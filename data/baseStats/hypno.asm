@@ -6,7 +6,7 @@ db 67 ; base speed
 db 115 ; base special
 db PSYCHIC ; species type 1
 db PSYCHIC ; species type 2
-db 75 ; catch rate
+db CAP_HARD_MIN ; catch rate
 db 165 ; base exp yield
 INCBIN "pic/bmon/hypno.pic",0,1 ; 77, sprite dimensions
 dw HypnoPicFront

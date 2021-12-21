@@ -181,6 +181,7 @@ const_value = 1
 	const MIND_SPARK   ; b1
 	const STAMPEDE     ; b2
 	const FORKING_BOLT ; b3
+	const SUMMON_SWARM ; b4
 	;END MODS
 
 NUM_ATTACKS EQU const_value + -1

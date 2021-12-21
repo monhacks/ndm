@@ -6,7 +6,7 @@ db 40 ; base speed
 db 30 ; base special
 db GROUND ; species type 1
 db GROUND ; species type 2
-db 255 ; catch rate
+db CAP_EASY ; catch rate
 db 93 ; base exp yield
 INCBIN "pic/bmon/sandshrew.pic",0,1 ; 55, sprite dimensions
 dw SandshrewPicFront

@@ -180,6 +180,7 @@ MoveNames::
 	db "MIND SPARK@"
 	db "STAMPEDE@"
 	db "FORKING BOLT@"
+	db "SUMMON SWARM@"
 	
 	;END MODS
 	db "STRUGGLE@" ; struggle must go last

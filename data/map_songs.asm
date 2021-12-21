@@ -1,3 +1,41 @@
+; A REFERENCE IN CASE YOU DON'T KNOW THESE SONGS
+
+; PalletTown - it's pallet town lol. kinda sleepy
+; Music_Vermilion - it's vermillion city you dope. jolly seaside tune
+; Music_Celadon - DA duh DAduh. danananaDA duh.
+; Music_Cinnabar - kinda hoity toity, reminicent of ss-anne 
+; Music_Lavender - it's lavender town. not the cool one, that's pokemontower
+; Cities1 - kinda melancholy. Da da da... danana, da na da na na. 
+; Cities2 - upbeat, the one that reminds you of guitar
+
+; Music_Routes1 - Route 1, the derpy one that you hate 
+; Music_Routes2 - the default opening song, kinda seaside-ey
+; Music_Routes3 - the really emotional one with a steady marching beat bit of optimism 
+; Music_Routes4 - the one that sounds kinda like the credits theme 
+
+; Music_Dungeon1 - ROCKET Hideout! Some bad stuff is going down
+; Music_Dungeon2 - da. da. da. da. DA. DA. DA. DA. Viridian forest
+; Music_Dungeon3 - the consistent bass line  da.. na... danaDANAdana... (mt moon)
+
+; Music_GameCorner - the slot machine music
+; Music_SSAnne - it's the ss anne theme omg duh 
+; Music_CinnabarMansion - that really weird one that's kinda all over the place
+; Music_SilphCo - very panicky dungeon tune 
+; Music_Gym - the one that was the action theme in the anime
+; Music_PokemonTower - the cool creepy ghosty waltz 
+; Music_IndigoPlateau - the marching theme, the one you associate with lance, leading up to something big
+; Music_Pokecenter - it's the pokecentere theme, also used in marts actually!
+; Music_BikeRiding - bike 
+; Music_Surfing - surfing 
+; Music_OaksLab - oaks 
+; Music_HallOfFame - dananaNA! dananaNA-na! anticipation!
+; Music_Credits - the big ol credits theme 
+; Music_TitleScreen - title theme
+; Music_SafariZone - also evolution music 
+; Music_MuseumGuy - tour guide march 
+; Music_MeetProfOak - !! Don't go in tall grass! has bits of oak's theme in it
+; Music_MeetRival - BNAbabnenabeab it's rival time!
+
 MapSongBanks:
 	db MUSIC_PALLET_TOWN, BANK(Music_PalletTown) ; PALLET_TOWN
 	db MUSIC_CITIES1, BANK(Music_Cities1) ; VIRIDIAN_CITY

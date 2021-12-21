@@ -6,7 +6,7 @@ db 130 ; base speed
 db 110 ; base special
 db ELECTRIC ; species type 1
 db ELECTRIC ; species type 2
-db 45 ; catch rate
+db CAP_HARD_MIN ; catch rate
 db 197 ; base exp yield
 INCBIN "pic/bmon/jolteon.pic",0,1 ; 66, sprite dimensions
 dw JolteonPicFront

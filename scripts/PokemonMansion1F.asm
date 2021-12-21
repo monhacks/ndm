@@ -34,12 +34,12 @@ Mansion1Subscript1:
 	jp Mansion1Script_4430b
 
 Mansion1Script_44304:
-	ld a, $2d
+	ld a, $2d ; bottom horizontal door
 	ld [wNewTileBlockID], a
 	jr Mansion1ReplaceBlock
 
 Mansion1Script_4430b:
-	ld a, $e
+	ld a, $e ; open door
 	ld [wNewTileBlockID], a
 Mansion1ReplaceBlock:
 	predef ReplaceTileBlock

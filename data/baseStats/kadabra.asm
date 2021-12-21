@@ -6,7 +6,7 @@ db 105 ; base speed
 db 120 ; base special
 db PSYCHIC ; species type 1
 db PSYCHIC ; species type 2
-db 100 ; catch rate
+db CAP_MID_PLUS ; catch rate
 db 145 ; base exp yield
 INCBIN "pic/bmon/kadabra.pic",0,1 ; 66, sprite dimensions
 dw KadabraPicFront

@@ -63,9 +63,8 @@ _Route2EndBattleText2::
 	prompt
 	
 _Route2AfterBattleText2::
-	text "I got attacked" 
-	line "by a huge BUG"
-	cont "#MON!"
+	text "I think I saw a" 
+	line "VICTREEBEL!"
 	
 	para "It was scary!"
 	done
@@ -97,8 +96,8 @@ _Route2BattleText4::
 	done
 	
 _Route2EndBattleText4::
-	text "Bugged" 
-	line "out!"
+	text "I" 
+	line "bugged out!"
 	prompt
 	
 _Route2AfterBattleText4::

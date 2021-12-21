@@ -6,7 +6,7 @@ db 58 ; base speed
 db 65 ; base special
 db WATER ; species type 1
 db WATER ; species type 2
-db 45 ; catch rate
+db CAP_MID ; catch rate
 db 143 ; base exp yield
 INCBIN "pic/bmon/wartortle.pic",0,1 ; 66, sprite dimensions
 dw WartortlePicFront

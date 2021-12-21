@@ -11,7 +11,7 @@ Route5_Object:
 	sign 11, 3, 4 ; north sign (text4)
 
 	db 3 ; objects
-	object SPRITE_HIKER,  8, 19, STAY, NONE, 1, OPP_FISHER, 1
+	object SPRITE_HIKER,  8, 19, STAY, LEFT, 1, OPP_FISHER, 1
 	object SPRITE_TRAINER,  7, 25, STAY, NONE, 2, OPP_TAMER, 1
 	object SPRITE_DAISY, 10, 12, STAY, NONE, 3, OPP_COOLTRAINER_F, 1
 	

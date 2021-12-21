@@ -6,7 +6,7 @@ db 50 ; base speed
 db 65 ; base special
 db POISON ; species type 1
 db POISON ; species type 2
-db 75 ; catch rate
+db CAP_HARD_MIN ; catch rate
 db 157 ; base exp yield
 INCBIN "pic/bmon/muk.pic",0,1 ; 77, sprite dimensions
 dw MukPicFront

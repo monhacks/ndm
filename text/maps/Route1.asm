@@ -1,6 +1,8 @@
 _Route1ViridianMartSampleText::
-	text "Hi! I work at the"
-	line "#MON MART in"
+	text "Hi! I'm delivering"
+	line "some stuff to"
+	cont "the campers from"
+	cont "the #MART in"
 	cont "VIRIDIAN CITY!"
 
 	para "We're running a"

@@ -348,7 +348,7 @@ CableClubOptionsText:
 	next "uu@"
 	
 ModWarningText:
-	db   "v0.13a / WEEDLE"
+	db   "v0.14 / KAKUNA"
 	next "discord.gg/cBfujky@"
 
 DisplayContinueGameInfo:

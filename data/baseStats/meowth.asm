@@ -6,7 +6,7 @@ db 90 ; base speed
 db 40 ; base special
 db NORMAL ; species type 1
 db NORMAL ; species type 2
-db 255 ; catch rate
+db CAP_EASY_PLUS ; catch rate
 db 69 ; base exp yield
 INCBIN "pic/bmon/meowth.pic",0,1 ; 55, sprite dimensions
 dw MeowthPicFront

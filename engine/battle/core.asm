@@ -2975,7 +2975,7 @@ PrintMenuItem:
 	ld [wWhichPokemon], a
 	ld a, BATTLE_MON_DATA
 	ld [wMonDataLocation], a
-	callab GetMaxPP
+	callab GetMaxPP ; this also sets the move power
 	ld hl, wCurrentMenuItem
 	ld c, [hl]
 	inc [hl]
@@ -2986,24 +2986,28 @@ PrintMenuItem:
 	and $3f
 	ld [wcd6d], a
 ; print TYPE/<type> and <curPP>/<maxPP>
-	coord hl, 1, 9
-	ld de, TypeText
+	coord hl, 7, 10
+	ld de, PowerText
 	call PlaceString
-	coord hl, 7, 11
+	coord hl, 8, 11
+	ld de, PPText
+	call PlaceString	
+	coord hl, 4, 11
 	ld [hl], "/"
-	coord hl, 5, 9
-	ld [hl], "/"
-	coord hl, 5, 11
-	ld de, wcd6d
+	coord hl, 2, 11
+	ld de, wcd6d ; current pp
 	lb bc, 1, 2
 	call PrintNumber
-	coord hl, 8, 11
+	coord hl, 5, 11
 	ld de, wMaxPP
 	lb bc, 1, 2
-	call PrintNumber
+	call PrintNumber ; print max PP
 	call GetCurrentMove
-	coord hl, 2, 10
-	predef PrintMoveType
+	predef PrintMoveType ; print type, position coded as 1,9 in that fn
+	coord hl, 3, 10
+	ld de, wMovePower
+	lb bc, 1, 3
+	call PrintNumber ; print power
 .moveDisabled
 	ld a, $1
 	ld [H_AUTOBGTRANSFERENABLED], a
@@ -3012,9 +3016,11 @@ PrintMenuItem:
 DisabledText:
 	db "disabled!@"
 
-TypeText:
-	db "TYPE@"
-
+PowerText:
+	db "POW@"
+PPText:
+	db "PP@"
+	
 SelectEnemyMove:
 	ld a, [wLinkState]
 	sub LINK_STATE_BATTLING
@@ -6122,12 +6128,25 @@ LoadEnemyMonData:
 	ld b, [hl]
 	jr nz, .storeDVs
 	ld a, [wIsInBattle]
-	cp $2 ; is it a trainer battle?
-; fixed DVs for trainer mon
-	ld a, $98
-	ld b, $88
-	jr z, .storeDVs
-; random DVs for wild mon
+	cp $2 ; is it a trainer battle?	
+	jr nz, .setRandomDVs ; wilds have random DVs
+	ld a, [wGameDifficulty]
+	cp $1
+	jr z, .diffHard
+	jr nc, .diffMaster	
+	;standard difficulty: 8/9 DVs, because gamefreak said so
+	ld a, $89
+	ld b, $89
+	jr .storeDVs
+.diffHard ; trainer DVs are 75%
+	ld a, $bb
+	ld b, $bb
+	jr .storeDVs
+.diffMaster ; trainers have nearly perfect pokemon: 14s in everything. cannot be strange.
+	ld a, $ee
+	ld b, $ee
+	jr .storeDVs
+.setRandomDVs ; random DVs for wild mon
 	call BattleRandom
 	ld b, a
 	call BattleRandom
@@ -7127,8 +7146,7 @@ SleepEffect:
 .setSleepCounter
 ; set target's sleep counter to a random number between 1 and 7
 	call BattleRandom
-	and $3 ; mod: 1-3, +1 later (2-4)
-	jr z, .setSleepCounter
+	and $3 ; mod: restrict range to 0-3. add 1 after this step, making the range (1-4)
 	inc a ; increment so they can't immediately wake up
 	ld [de], a
 	call PlayCurrentMoveAnimation2
@@ -8237,9 +8255,9 @@ ConfusionSideEffectSuccess:
 	set CONFUSED, [hl] ; mon is now confused
 	push af
 	call BattleRandom
-	and $3
+	and $3 ; 0-3 turns
 	inc a
-	inc a
+	inc a ; + 2
 	ld [bc], a ; confusion status will last 2-5 turns
 	pop af
 	cp CONFUSION_SIDE_EFFECT

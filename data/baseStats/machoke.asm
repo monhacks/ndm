@@ -6,7 +6,7 @@ db 45 ; base speed
 db 50 ; base special
 db FIGHTING ; species type 1
 db FIGHTING ; species type 2
-db 90 ; catch rate
+db CAP_MID_PLUS ; catch rate
 db 146 ; base exp yield
 INCBIN "pic/bmon/machoke.pic",0,1 ; 77, sprite dimensions
 dw MachokePicFront

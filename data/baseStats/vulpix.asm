@@ -6,7 +6,7 @@ db 65 ; base speed
 db 65 ; base special
 db FIRE ; species type 1
 db FIRE ; species type 2
-db 190 ; catch rate
+db CAP_EASY_PLUS ; catch rate
 db 63 ; base exp yield
 INCBIN "pic/bmon/vulpix.pic",0,1 ; 66, sprite dimensions
 dw VulpixPicFront

@@ -98,15 +98,13 @@ _Route9BattleText6::
 	cont "be the only"
 	cont "surprise!"
 	
-	para "Now enough"
-	line "talk, let's"
-	cont "BATTLE!"
+	para "Now enough talk,"
+	line "let's BATTLE!"
 	done
 
 _Route9EndBattleText6::
-	text "...How."
-	line "How did you"
-	cont "win?!"
+	text "How?!"
+	line "How did you win?"
 	
 	para "I made the"
 	line "perfect team,"
@@ -126,23 +124,26 @@ _Route9AfterBattleText6::
 	done
 
 _Route9BattleText7::
-	text "I got up early"
-	line "every day to"
-	cont "raise my #MON"
-	cont "from cocoons!"
+	text "Yawn..."
+	line "Bug catching is"
+	cont "too easy for me."
+	
+	para "So is battling!"
 	done
 
 _Route9EndBattleText7::
 	text "WHAT?"
 
-	para "What a total"
-	line "waste of time!"
+	para "I never lose!"
 	prompt
 
 _Route9AfterBattleText7::
 	text "I have to collect"
 	line "more than bugs to"
 	cont "get stronger..."
+	
+	para "... but I don't"
+	line "wanna!"
 	done
 
 _Route9BattleText8::
@@ -151,30 +152,35 @@ _Route9BattleText8::
 	done
 
 _Route9EndBattleText8::
-	text "Hahahaha!"
-	line "You beat me fair!"
+	text "Haha!"
+	line "...Wait."
 	prompt
 
 _Route9AfterBattleText8::
-	text "Hahahaha!"
-	line "Us hearty guys"
-	cont "always laugh!"
+	text "Ha HAH!"
+	line "Laughing makes me"
+	cont "feel confident!"
 	done
 
 _Route9BattleText9::
-	text "Go, my super bug"
-	line "#MON!"
+	text "Check me out!"
+	line "I'm the next"
+	cont "#MON LEAGUE"
+	cont "champion!"
 	done
 
 _Route9EndBattleText9::
-	text "My"
-	line "bugs..."
+	text "Oh,"
+	line "uhh..."
 	prompt
 
 _Route9AfterBattleText9::
-	text "If you don't like"
-	line "bug #MON, you"
-	cont "bug me!"
+	text "I can still be"
+	line "the CHAMPION!"
+	
+	para "Just as long as"
+	line "you aren't also"
+	cont "competing..."
 	done
 
 _Route9Text11::

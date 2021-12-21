@@ -6,7 +6,7 @@ db 68 ; base speed
 db 80 ; base special
 db WATER ; species type 1
 db WATER ; species type 2
-db 60 ; catch rate
+db CAP_MID_PLUS ; catch rate
 db 170 ; base exp yield
 INCBIN "pic/bmon/seaking.pic",0,1 ; 77, sprite dimensions
 dw SeakingPicFront

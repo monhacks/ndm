@@ -6,7 +6,7 @@ db 78 ; base speed
 db 85 ; base special
 db WATER ; species type 1
 db WATER ; species type 2
-db 45 ; catch rate
+db CAP_HARD ; catch rate
 db 210 ; base exp yield
 INCBIN "pic/bmon/blastoise.pic",0,1 ; 77, sprite dimensions
 dw BlastoisePicFront

@@ -147,7 +147,7 @@ ENDM
 	mapconst CELADON_CHIEF_HOUSE,            4,  4 ; $8B
 	mapconst CELADON_HOTEL,                  4,  7 ; $8C
 	mapconst LAVENDER_POKECENTER,            4,  4 ; $8D
-	mapconst POKEMON_TOWER_1F,               9, 10 ; $8E
+	mapconst POKEMON_TOWER_1F,               15, 11 ; $8E MOD: side forest1
 	mapconst POKEMON_TOWER_2F,               9, 10 ; $8F
 	mapconst POKEMON_TOWER_3F,               9, 10 ; $90
 	mapconst POKEMON_TOWER_4F,               9, 10 ; $91

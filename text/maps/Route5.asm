@@ -1,37 +1,52 @@
 _Route5BattleText1::
-	text "r5b1 battle"
+	text "I've been patient"
+	line "long enough!"
+	cont "ARRRRRRRRGH!"
 	done
 
 _Route5EndBattleText1::
-	text "r5b1 end"
+	text "I"
+	line "got baited!"
 	prompt
 
 _Route5AfterBattleText1::
-	text "r5b1 after"
+	text "Maybe fishing"
+	line "isn't for me."
 	done
 
 _Route5BattleText2::
-	text "r5b2 battle"
+	text "I've traveled"
+	line "across the land,"
+	cont "searching far"
+	cont "and wide!"
 	done
 
 _Route5EndBattleText2::
-	text "r5b2 end"
+	text "No!"
+	line "Each of my"
+	cont "#MON lost!"
 	prompt
 
 _Route5AfterBattleText2::
-	text "r5b2 after"
+	text "I guess I haven't"
+	line "yet understood"
+	cont "the power that's"
+	cont "inside my"
+	cont "#MON."
 	done
 
 _Route5BattleText3::
-	text "r5b3 battle"
+	text "... No talk."
+	line "Let's battle."	
 	done
 
 _Route5EndBattleText3::
-	text "r5b3 end"
+	text "I see."
 	prompt
 
 _Route5AfterBattleText3::
-	text "r5b3 after"
+	text "We'll do battle"
+	line "again someday."
 	done
 	
 _Route5Text4::

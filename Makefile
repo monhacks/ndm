@@ -65,7 +65,7 @@ pokered_opt  = -jsv -k 01 -l 0x33 -m 0x13 -p 0 -r 03 -t "PKMN BUT GOOD"
 pokeblue_opt = -jsv -k 01 -l 0x33 -m 0x13 -p 0 -r 03 -t "POKEMON BLUE"
 
 %.gbc: $$(%_obj)
-	$(RGBLINK) -d -n $*.sym -l pokered.link -o $@ $^
+	$(RGBLINK) -d -m $*.map -n $*.sym -l pokered.link -o $@ $^
 	$(RGBFIX) $($*_opt) $@
 	sort $*.sym -o $*.sym
 

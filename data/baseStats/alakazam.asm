@@ -6,7 +6,7 @@ db 120 ; base speed
 db 135 ; base special
 db PSYCHIC ; species type 1
 db PSYCHIC ; species type 2
-db 50 ; catch rate
+db CAP_HARD_PLUS ; catch rate
 db 186 ; base exp yield
 INCBIN "pic/bmon/alakazam.pic",0,1 ; 77, sprite dimensions
 dw AlakazamPicFront

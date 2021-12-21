@@ -6,7 +6,7 @@ db 80 ; base speed
 db 100 ; base special
 db GRASS ; species type 1
 db GRASS ; species type 2
-db 45 ; catch rate
+db CAP_HARD ; catch rate
 db 208 ; base exp yield
 INCBIN "pic/bmon/venusaur.pic",0,1 ; 77, sprite dimensions
 dw VenusaurPicFront

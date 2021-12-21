@@ -6,7 +6,7 @@ db 95 ; base speed
 db 60 ; base special
 db FIGHTING ; species type 1
 db FIGHTING ; species type 2
-db 75 ; catch rate
+db CAP_HARD_MIN ; catch rate
 db 149 ; base exp yield
 INCBIN "pic/bmon/primeape.pic",0,1 ; 77, sprite dimensions
 dw PrimeapePicFront

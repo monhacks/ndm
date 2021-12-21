@@ -6,7 +6,7 @@ db 95 ; base speed
 db 80 ; base special
 db FIRE ; species type 1
 db FIRE ; species type 2
-db 75 ; catch rate
+db CAP_HARD_MIN ; catch rate
 db 213 ; base exp yield
 INCBIN "pic/bmon/arcanine.pic",0,1 ; 77, sprite dimensions
 dw ArcaninePicFront

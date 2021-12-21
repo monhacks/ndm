@@ -6,7 +6,7 @@ db 70 ; base speed
 db 100 ; base special
 db WATER ; species type 1
 db POISON ; species type 2
-db 190 ; catch rate
+db CAP_EASY ; catch rate
 db 105 ; base exp yield
 INCBIN "pic/bmon/tentacool.pic",0,1 ; 55, sprite dimensions
 dw TentacoolPicFront

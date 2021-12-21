@@ -2430,7 +2430,7 @@ InitBattleEnemyParameters::
 	ld [wCurOpponent], a
 	ld [wEnemyMonOrTrainerClass], a
 	cp 200
-	ld a, [wEngagedTrainerSet]
+	ld a, [wEngagedTrainerSet] ;  if i ever want to do something with that last value, here it is
 	jr c, .noTrainer
 	; it's a trainer. all special battles will be overriden manually, so let's calc what party to use
 	ld a, [wEffectiveNumBadgesOwned]

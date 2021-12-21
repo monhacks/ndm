@@ -5,8 +5,8 @@ db 67 ; base defense
 db 105 ; base speed
 db 95 ; base special
 db ELECTRIC ; species type 1
-db ELECTRIC ; species type 2
-db 45 ; catch rate
+db FIGHTING ; species type 2
+db CAP_HARD_MIN ; catch rate
 db 156 ; base exp yield
 INCBIN "pic/bmon/electabuzz.pic",0,1 ; 66, sprite dimensions
 dw ElectabuzzPicFront

@@ -1,3 +1,24 @@
+_DifficultyText1::
+	text "Choose the game"
+	line "difficulty."
+	
+	para "NORMAL is how the"
+	line "game is meant to"
+	cont "be enjoyed."
+	
+	para "HARD is for those"
+	line "who want to test"
+	cont "their skills."
+	
+	para "MASTER is for"
+	line "trainers who want"
+	cont "to attempt an"
+	cont "unfair challenge."
+	
+	para "This cannot be"
+	line "changed once set."
+	prompt
+	
 _OakSpeechText1::
 IF DEF(_RED)
 	text "Hello there!"

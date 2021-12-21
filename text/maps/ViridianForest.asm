@@ -19,8 +19,13 @@ _ViridianForestEndBattleText1::
 	prompt
 
 _ViridianFrstAfterBattleText1::
-	text "You're distracting"
-	line "me from my work!"
+	text "Gotta be careful"
+	line "with fire!"
+	
+	para "Burned #MON"
+	line "get exhausted a"
+	cont "lot quicker in"
+	cont "battle!"
 	done
 
 _ViridianForestBattleText2::

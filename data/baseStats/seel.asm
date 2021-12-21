@@ -6,7 +6,7 @@ db 45 ; base speed
 db 70 ; base special
 db WATER ; species type 1
 db ICE ; species type 2
-db 190 ; catch rate
+db CAP_EASY_PLUS ; catch rate
 db 100 ; base exp yield
 INCBIN "pic/bmon/seel.pic",0,1 ; 66, sprite dimensions
 dw SeelPicFront

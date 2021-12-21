@@ -6,7 +6,7 @@ db 93 ; base speed
 db 125 ; base special
 db FIRE ; species type 1
 db FIRE ; species type 2
-db 45 ; catch rate
+db CAP_HARD_MIN ; catch rate
 db 167 ; base exp yield
 INCBIN "pic/bmon/magmar.pic",0,1 ; 66, sprite dimensions
 dw MagmarPicFront

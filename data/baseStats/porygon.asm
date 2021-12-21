@@ -6,7 +6,7 @@ db 40 ; base speed
 db 75 ; base special
 db ELECTRIC ; species type 1
 db ELECTRIC ; species type 2
-db 45 ; catch rate
+db CAP_MID_PLUS ; catch rate
 db 130 ; base exp yield
 INCBIN "pic/bmon/porygon.pic",0,1 ; 66, sprite dimensions
 dw PorygonPicFront

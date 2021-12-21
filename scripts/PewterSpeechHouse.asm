@@ -126,7 +126,9 @@ PSHRivalFightScript:
 	call DisplayTextID ; show textpointer 1
 	call Delay3
 	ld a, OPP_SONY1
-	ld [wCurOpponent], a
+	ld [wEngagedTrainerClass], a
+	;set rival encounter number...
+	call InitBattleEnemyParameters	
 	call PSHPlayerFaceRival ; again? 
 	ld a, $2
 	ld [wPewterGymCurScript], a ; set script to post-fight

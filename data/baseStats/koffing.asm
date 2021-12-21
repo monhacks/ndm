@@ -6,7 +6,7 @@ db 35 ; base speed
 db 60 ; base special
 db POISON ; species type 1
 db FIRE ; species type 2
-db 190 ; catch rate
+db CAP_EASY_PLUS ; catch rate
 db 114 ; base exp yield
 INCBIN "pic/bmon/koffing.pic",0,1 ; 66, sprite dimensions
 dw KoffingPicFront

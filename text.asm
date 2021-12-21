@@ -923,6 +923,11 @@ _PokemonStuffText::
 	text "Wow! Tons of"
 	line "#MON stuff!"
 	done
+	
+_CutBushText::
+	text "A bush stands in"
+	line "your way!"
+	done
 
 _OutOfSafariBallsText::
 	text "PA: Ding-dong!"
@@ -1798,6 +1803,10 @@ _HisNameIsText::
 	cont "quite a storied"
 	cont "history, if I'm"
 	cont "not mistaken."
+	prompt
+
+_DifficultySetText::
+	text "Good Luck!"
 	prompt
 
 _WillBeTradedText::
@@ -2686,8 +2695,8 @@ _SurfingGotOnText::
 	prompt
 
 _SurfingNoPlaceToGetOffText::
-	text "There's no place"
-	line "to get off!"
+	text "Wow! I'm SURFing!"
+	line "Tubular!"
 	prompt
 
 _VitaminStatRoseText::

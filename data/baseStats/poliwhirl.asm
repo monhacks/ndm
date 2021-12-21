@@ -6,7 +6,7 @@ db 90 ; base speed
 db 50 ; base special
 db WATER ; species type 1
 db WATER ; species type 2
-db 120 ; catch rate
+db CAP_MID ; catch rate
 db 131 ; base exp yield
 INCBIN "pic/bmon/poliwhirl.pic",0,1 ; 66, sprite dimensions
 dw PoliwhirlPicFront

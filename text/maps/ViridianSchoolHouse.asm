@@ -37,9 +37,9 @@ _ViridianGateTextNotEnough::
 	cont "more about your"
 	cont "findings!"
 	
-	para "Make sure you"
-	line "have room on"
-	cont "you for a gift!"
+	para "There might even"
+	line "be a surprise in"
+	cont "it for you!"
 	done
 	
 _ViridianGateTextGiveBoard::

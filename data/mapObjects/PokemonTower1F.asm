@@ -2,10 +2,10 @@ PokemonTower1F_Object:
 	db $3 ; border block
 
 	db 4 ; warps
+	warp  8, 21, 1, -1
 	warp  9, 21, 1, -1
-	warp 10, 21, 1, -1
-	warp 23,  0, 1, POKEMON_TOWER_2F
 	warp 24,  0, 1, POKEMON_TOWER_2F
+	warp 25,  0, 1, POKEMON_TOWER_2F
 
 	db 0 ; signs
 
@@ -17,7 +17,7 @@ PokemonTower1F_Object:
 	object SPRITE_MEDIUM, 20, 18, STAY, DOWN, 5 ; person
 
 	; warp-to
+	warp_to  8, 21, POKEMON_TOWER_1F_WIDTH
 	warp_to  9, 21, POKEMON_TOWER_1F_WIDTH
-	warp_to 10, 21, POKEMON_TOWER_1F_WIDTH
-	warp_to 23,  0, POKEMON_TOWER_1F_WIDTH ; POKEMON_TOWER_2F
 	warp_to 24,  0, POKEMON_TOWER_1F_WIDTH ; POKEMON_TOWER_2F
+	warp_to 25,  0, POKEMON_TOWER_1F_WIDTH ; POKEMON_TOWER_2F

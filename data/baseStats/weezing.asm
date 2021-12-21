@@ -6,7 +6,7 @@ db 60 ; base speed
 db 85 ; base special
 db POISON ; species type 1
 db FIRE ; species type 2
-db 60 ; catch rate
+db CAP_HARD_MIN ; catch rate
 db 173 ; base exp yield
 INCBIN "pic/bmon/weezing.pic",0,1 ; 77, sprite dimensions
 dw WeezingPicFront

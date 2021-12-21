@@ -6,7 +6,7 @@ db 15 ; base speed
 db 40 ; base special
 db WATER ; species type 1
 db PSYCHIC ; species type 2
-db 190 ; catch rate
+db CAP_EASY_PLUS ; catch rate
 db 99 ; base exp yield
 INCBIN "pic/bmon/slowpoke.pic",0,1 ; 55, sprite dimensions
 dw SlowpokePicFront

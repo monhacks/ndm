@@ -180,6 +180,7 @@ AttackAnimationPointers:
 	dw MindSparkAnim
 	dw StampedeAnim
 	dw ForkingBoltAnim
+	dw SummonSwarmAnim
 	;END MODS
 	dw StruggleAnim ; struggle must go last
 	dw ShowPicAnim
@@ -870,6 +871,7 @@ LightScreenAnim:
 	db SE_RESET_SCREEN_PALETTE, $FF
 	db $FF
 
+SummonSwarmAnim:
 HazeAnim:
 	db SE_DARKEN_MON_PALETTE, $FF
 	db SE_WATER_DROPLETS_EVERYWHERE, $38

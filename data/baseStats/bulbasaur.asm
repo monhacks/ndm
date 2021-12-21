@@ -7,7 +7,7 @@ db 45 ; base speed
 db 65 ; base special
 db GRASS ; species type 1
 db GRASS ; species type 2
-db 120 ; catch rate
+db CAP_EASY ; catch rate
 db 64 ; base exp yield
 INCBIN "pic/bmon/bulbasaur.pic",0,1 ; 55, sprite dimensions
 dw BulbasaurPicFront

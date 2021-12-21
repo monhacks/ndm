@@ -64,6 +64,18 @@ HisNameIsText:
 	TX_FAR _HisNameIsText
 	db "@"
 
+ChooseDifficulty:
+	ld de, DifficultyNames
+	call DisplayDifficultyTextBox
+	ld a, [wCurrentMenuItem]
+	ld [wGameDifficulty], a
+	ld hl, DifficultySetText
+	jp PrintText
+	
+DifficultySetText:
+	TX_FAR _DifficultySetText
+	db "@"
+
 OakSpeechSlidePicLeft:
 	push de
 	coord hl, 0, 0
@@ -187,6 +199,27 @@ DisplayIntroNameTextBox:
 .namestring
 	db "NAME@"
 
+DisplayDifficultyTextBox:
+	push de
+	coord hl, 0, 0
+	ld b, $7
+	ld c, $8
+	call TextBoxBorder
+	pop de
+	coord hl, 2, 2
+	call PlaceString
+	call UpdateSprites
+	xor a
+	ld [wCurrentMenuItem], a
+	ld [wLastMenuItem], a
+	inc a
+	ld [wTopMenuItemX], a
+	ld [wMenuWatchedKeys], a ; A_BUTTON
+	inc a
+	ld [wTopMenuItemY], a
+	ld [wMaxMenuItem], a
+	
+	jp HandleMenuInput
 
 DefaultNamesPlayer:
 	db   "NEW NAME"
@@ -202,7 +235,13 @@ DefaultNamesRival:
 	next "GARY"
 	db   "@"
 
+DifficultyNames:
+	db	 "NORMAL"
+	next "HARD"
+	next "MASTER"
+	db 	 "@"
 
+	
 GetDefaultName:
 ; a = name index
 ; hl = name list
@@ -240,5 +279,11 @@ DefaultNamesRivalList:
 	db "DENNIS@"
 	db "GARY@"
 
+DifficultyNamesList:
+	db	 "NORMAL"
+	next "HARD"
+	next "MASTER"
+	db 	 "@"
+	
 TextTerminator_6b20:
 	db "@"

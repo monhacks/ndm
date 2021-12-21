@@ -151,3 +151,46 @@ TownMapText:
 PokemonStuffText:
 	TX_FAR _PokemonStuffText
 	db "@"
+
+PrintCutBushText:
+	TX_ASM
+	ld hl, CutBushText
+	call PrintText
+	call YesNoChoice
+	ld a, [wCurrentMenuItem]
+	and a
+	jr nz, .rejectCut
+	; do cut things
+	ld a, [wTileInFrontOfPlayer]
+	ld [wCutTile], a
+	ld a, 1
+	ld [wActionResultOrTookBattleTurn], a ; used cut
+	set 6, [hl]
+	xor a
+	ld [hWY], a
+	ld hl, UsedScytheText
+	call PrintText
+	call UpdateSprites
+	ld hl, wd730
+	res 6, [hl]
+	ld a, $ff
+	ld [wUpdateSpritesEnabled], a
+	call InitCutAnimOAM
+	ld de, CutTreeBlockSwaps
+	call ReplaceTreeTileBlock
+	call RedrawMapView
+	callba AnimCut
+	ld a, $1
+	ld [wUpdateSpritesEnabled], a
+	call UpdateSprites
+	ld a, SFX_CUT
+	call PlaySound
+	ld a, $90
+	ld [hWY], a
+	ret
+.rejectCut
+	jp TextScriptEnd
+
+CutBushText:
+	TX_FAR _CutBushText
+	db "@"

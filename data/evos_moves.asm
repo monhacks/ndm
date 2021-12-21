@@ -216,8 +216,8 @@ KangaskhanEvosMoves:
 	db 9, COMET_PUNCH
 	db 12, LOW_KICK
 	db 15, JUMP_KICK
-	db 18, MEGA_PUNCH
-	db 21, DIZZY_PUNCH
+	db 18, DIZZY_PUNCH
+	db 21, TAKE_DOWN
 	db 24, MEGA_KICK
 	db 27, SOFTBOILED
 	db 30, HI_JUMP_KICK
@@ -619,7 +619,7 @@ BlastoiseEvosMoves:
 	db 12, BITE
 	db 15, BUBBLEBEAM
 	db 18, HYPER_FANG
-	db 21, SKULL_BASH
+	db 21, ICE_BEAM
 	db 24, HYDRO_PUMP
 	db 27, BODY_SLAM
 	db 30, SUBMISSION
@@ -974,10 +974,10 @@ ElectabuzzEvosMoves:
 	db 9, SWIFT
 	db 12, THUNDER_WAVE
 	db 15, THUNDERPUNCH
-	db 18, MEGA_PUNCH
+	db 18, DIZZY_PUNCH
 	db 21, SCREECH
 	db 24, THUNDERBOLT
-	db 27, LIGHT_SCREEN
+	db 27, SUBMISSION
 	db 30, THUNDER
 	db 0
 
@@ -1102,9 +1102,9 @@ FarfetchdEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 6, CUT
+	db 6, CUDGEL
 	db 9, FURY_ATTACK
-	db 12, CUDGEL
+	db 12, CUT
 	db 15, EGG_BOMB
 	db 18, SCREECH
 	db 21, SLASH
@@ -1122,10 +1122,10 @@ VenonatEvosMoves:
 	db 9, BUG_OUT
 	db 12, STUN_SPORE
 	db 15, CONFUSION
-	db 18, POISONPOWDER
-	db 21, PHANTASM
-	db 24, PSYBEAM
-	db 27, SLEEP_POWDER
+	db 18, PHANTASM
+	db 21, PSYBEAM
+	db 24, SLEEP_POWDER
+	db 27, SUMMON_SWARM
 	db 30, PSYCHIC_M
 	db 0
 
@@ -1188,7 +1188,7 @@ PoliwagEvosMoves:
 	db 12, DOUBLESLAP
 	db 15, MEGA_PUNCH
 	db 18, AMNESIA
-	db 21, WATERFALL
+	db 21, ICE_PUNCH
 	db 24, BODY_SLAM
 	db 27, SUBMISSION
 	db 30, HYDRO_PUMP
@@ -1797,13 +1797,13 @@ DodrioEvosMoves:
 ; Learnset
 	db 6, FURY_ATTACK
 	db 9, QUICK_ATTACK
-	db 12, FURY_SWIPES
-	db 15, RAGE
-	db 18, TRI_ATTACK
-	db 21, JUMP_KICK
+	db 12, RAGE
+	db 15, FURY_SWIPES
+	db 18, JUMP_KICK
+	db 21, DRILL_PECK
 	db 24, BODY_SLAM
-	db 27, DRILL_PECK
-	db 30, HYPER_BEAM
+	db 27, TRI_ATTACK
+	db 30, HI_JUMP_KICK
 	db 0
 
 PrimeapeEvosMoves:
@@ -1843,10 +1843,10 @@ VenomothEvosMoves:
 	db 9, BUG_OUT
 	db 12, STUN_SPORE
 	db 15, CONFUSION
-	db 18, POISONPOWDER
-	db 21, PHANTASM
-	db 24, PSYBEAM
-	db 27, SLEEP_POWDER
+	db 18, PHANTASM
+	db 21, PSYBEAM
+	db 24, SLEEP_POWDER
+	db 27, SUMMON_SWARM
 	db 30, PSYCHIC_M
 	db 0
 
@@ -1890,7 +1890,7 @@ CaterpieEvosMoves:
 	db 21, SLEEP_POWDER
 	db 24, PHANTASM
 	db 27, WING_ATTACK ;HRH
-	db 30, PSYCHIC_M
+	db 30, SUMMON_SWARM
 	db 0
 
 MetapodEvosMoves:
@@ -1906,7 +1906,7 @@ MetapodEvosMoves:
 	db 21, SLEEP_POWDER
 	db 24, PHANTASM
 	db 27, WING_ATTACK ;HRH
-	db 30, PSYCHIC_M
+	db 30, SUMMON_SWARM
 	db 0
 
 ButterfreeEvosMoves:
@@ -1920,8 +1920,8 @@ ButterfreeEvosMoves:
 	db 18, PSYBEAM
 	db 21, SLEEP_POWDER
 	db 24, PHANTASM
-	db 27, WING_ATTACK ;HRH
-	db 30, PSYCHIC_M
+	db 27, WING_ATTACK
+	db 30, SUMMON_SWARM
 	db 0
 
 MachampEvosMoves:
@@ -2133,7 +2133,7 @@ WeezingEvosMoves:
 	db 15, FIREBALL
 	db 18, SMOKESCREEN
 	db 21, TOXIC
-	db 24, LIQUID_FORM
+	db 24, SLUDGE
 	db 27, AMNESIA
 	db 30, EXPLOSION
 	db 0
@@ -2490,11 +2490,11 @@ PorygonEvosMoves:
 	db 0
 ; Learnset
 	db 6, THUNDERSHOCK
-	db 9, SCREECH
+	db 9, CONFUSE_RAY
 	db 12, SUBSTITUTE
-	db 15, PSYBEAM
-	db 18, SHARPEN
-	db 21, CONVERSION
+	db 15, FORKING_BOLT
+	db 18, CONVERSION
+	db 21, TRANSFORM
 	db 24, RECOVER
 	db 27, THUNDERBOLT
 	db 30, TRI_ATTACK
@@ -2575,7 +2575,7 @@ SquirtleEvosMoves:
 	db 12, BITE
 	db 15, BUBBLEBEAM
 	db 18, HYPER_FANG
-	db 21, SKULL_BASH
+	db 21, ICE_BEAM
 	db 24, HYDRO_PUMP
 	db 27, BODY_SLAM
 	db 30, SUBMISSION
@@ -2607,7 +2607,7 @@ WartortleEvosMoves:
 	db 12, BITE
 	db 15, BUBBLEBEAM
 	db 18, HYPER_FANG
-	db 21, SKULL_BASH
+	db 21, ICE_BEAM
 	db 24, HYDRO_PUMP
 	db 27, BODY_SLAM
 	db 30, SUBMISSION

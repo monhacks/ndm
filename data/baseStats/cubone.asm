@@ -6,7 +6,7 @@ db 35 ; base speed
 db 40 ; base special
 db GROUND ; species type 1
 db GROUND ; species type 2
-db 190 ; catch rate
+db CAP_EASY_PLUS ; catch rate
 db 87 ; base exp yield
 INCBIN "pic/bmon/cubone.pic",0,1 ; 55, sprite dimensions
 dw CubonePicFront

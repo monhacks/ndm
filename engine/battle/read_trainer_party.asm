@@ -82,11 +82,23 @@ ReadTrainer:
 	ld a, MAX_LEVEL
 .SetTrainerLevel	
 	ld [wCurEnemyLVL], a
-	ld b, 3 ; B tracks how many mons we have left to assign
+	
+	ld a, [wGameDifficulty]
+	cp $1
+	jr z, .diffHard
+	jr nc, .diffMaster	
+
+	ld b, 3 ;standard difficulty: 3 mons
+	jr .DecideTrainerMonsLoop
+.diffHard 
+	ld b, 4 ;hard difficulty: 4 mons
+	jr .DecideTrainerMonsLoop
+.diffMaster ;
+	ld b, 5 ;expert difficulty: 5 mons
 .DecideTrainerMonsLoop
 	ld a, b 
 	cp 0
-	jp z, .FinishUp ;if we're done getting mons (all 3), then finish up.
+	jp z, .FinishUp ;if we're done getting mons, then finish up.
 	
 	call Random ; ROLL 
 	ld a, [hRandomAdd] ;A is part of that roll

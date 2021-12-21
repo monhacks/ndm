@@ -739,6 +739,8 @@ wInGameTradeTextPointerTableIndex:: ; cd12
 
 wPlayerMonUnmodifiedAttack:: ; cd12
 	ds 1
+	
+wGameDifficulty:: ; MOD : 0 for standard, 1 for hard, 2 for master.
 wInGameTradeGiveMonName:: ; cd13
 	ds 1
 wPlayerMonUnmodifiedDefense:: ; cd14
@@ -2194,6 +2196,7 @@ wMenuExitMethod:: ; d12e
 wDungeonWarpDataEntrySize:: ; d12f
 ; the size is always 6, so they didn't need a variable in RAM for this
 
+wMovePower::
 wWhichPewterGuy:: ; d12f
 ; 0 = museum guy
 ; 1 = gym guy

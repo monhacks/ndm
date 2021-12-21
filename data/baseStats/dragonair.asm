@@ -6,7 +6,7 @@ db 70 ; base speed
 db 70 ; base special
 db DRAGON ; species type 1
 db DRAGON ; species type 2
-db 45 ; catch rate
+db CAP_HARD_MIN ; catch rate
 db 144 ; base exp yield
 INCBIN "pic/bmon/dragonair.pic",0,1 ; 66, sprite dimensions
 dw DragonairPicFront

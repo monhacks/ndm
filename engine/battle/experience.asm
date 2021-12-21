@@ -234,7 +234,7 @@ GainExperience:
 	ld [wMonDataLocation], a
 	call LoadMonData
 	ld d, $1
-	callab PrintStatsBox
+	;callab PrintStatsBox
 	call WaitForTextScrollButtonPress
 	call LoadScreenTilesFromBuffer1
 	xor a ; PLAYER_PARTY_DATA

@@ -6,7 +6,7 @@ db 90 ; base speed
 db 90 ; base special
 db BUG ; species type 1
 db PSYCHIC ; species type 2
-db 75 ; catch rate
+db CAP_HARD_MIN ; catch rate
 db 138 ; base exp yield
 INCBIN "pic/bmon/venomoth.pic",0,1 ; 77, sprite dimensions
 dw VenomothPicFront

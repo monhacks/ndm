@@ -6,7 +6,7 @@ db 115 ; base speed
 db 100 ; base special
 db WATER ; species type 1
 db PSYCHIC ; species type 2
-db 60 ; catch rate
+db CAP_HARD_MIN ; catch rate
 db 207 ; base exp yield
 INCBIN "pic/bmon/starmie.pic",0,1 ; 66, sprite dimensions
 dw StarmiePicFront

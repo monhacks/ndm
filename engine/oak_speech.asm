@@ -34,10 +34,6 @@ SetDefaultNames:
 OakSpeech:
 	ld a, $FF
 	call PlaySound ; stop music
-	ld a, BANK(Music_Gym)
-	ld c, a
-	ld a, MUSIC_GYM
-	call PlayMusic
 	call ClearScreen
 	call LoadTextBoxTilePatterns
 	call SetDefaultNames
@@ -56,6 +52,19 @@ OakSpeech:
 	ld a, [wd732]
 	bit 1, a ; possibly a debug mode bit
 	jp nz, .skipChoosingNames
+	call ClearScreen
+	ld hl, DifficultyText1
+	call PrintText
+	call ChooseDifficulty
+	call GBFadeOutToWhite
+	call ClearScreen
+	
+	ld a, BANK(Music_Gym)
+	ld c, a
+	ld a, MUSIC_GYM
+	call PlayMusic
+	
+	
 	ld de, ProfOakPic
 	lb bc, Bank(ProfOakPic), $00
 	call IntroDisplayPicCenteredOrUpperRight
@@ -157,6 +166,10 @@ OakSpeech:
 	call GBFadeOutToWhite
 	jp ClearScreen
 	
+DifficultyText1:
+	TX_FAR _DifficultyText1
+	db "@"
+
 OakSpeechText1:
 	TX_FAR _OakSpeechText1
 	db "@"

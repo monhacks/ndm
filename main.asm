@@ -253,6 +253,7 @@ SeelSprite:           INCBIN "gfx/sprites/seel.2bpp"
 
 SECTION "Battle (BANK 5)", ROMX
 
+; This seems suspiciously empty????
 
 INCLUDE "engine/load_pokedex_tiles.asm"
 INCLUDE "engine/overworld/map_sprites.asm"
@@ -341,8 +342,6 @@ INCLUDE "engine/overworld/ledges.asm"
 
 
 SECTION "bank7", ROMX
-
-; @@@ FREESPACE: about 990 bytes 4-14-2019
 
 INCLUDE "data/mapHeaders/CinnabarIsland.asm"
 INCLUDE "data/mapObjects/CinnabarIsland.asm"
@@ -665,6 +664,8 @@ JynxPicBack::         INCBIN "pic/monback/jynxb.pic"
 
 SECTION "Battle (BANK A)", ROMX
 
+; WTF WHY IS THIS SO EMPTY???
+
 INCLUDE "engine/battle/moveEffects/leech_seed_effect.asm"
 
 
@@ -741,6 +742,8 @@ KakunaPicFront::      INCBIN "pic/bmon/kakuna.pic"
 KakunaPicBack::       INCBIN "pic/monback/kakunab.pic"
 
 SECTION "Battle (BANK B)", ROMX
+
+; suspiciously empty?
 
 INCLUDE "engine/battle/display_effectiveness.asm"
 
@@ -819,6 +822,7 @@ PidgeotPicBack::       INCBIN "pic/monback/pidgeotb.pic"
 
 SECTION "Battle (BANK C)", ROMX
 
+; WHY IS THIS SO EMPTY???
 INCLUDE "engine/battle/moveEffects/mist_effect.asm"
 INCLUDE "engine/battle/moveEffects/one_hit_ko_effect.asm"
 
@@ -886,6 +890,8 @@ OldManPic::            INCBIN "pic/trainer/oldman.pic"
 
 SECTION "Battle (BANK D)", ROMX
 
+; suspiciously empty???
+
 INCLUDE "engine/titlescreen2.asm"
 INCLUDE "engine/battle/link_battle_versus_text.asm"
 INCLUDE "engine/slot_machine_slim.asm"
@@ -924,8 +930,6 @@ INCLUDE "engine/battle/core.asm"
 
 VisigoPicFront::     INCBIN "pic/bmon/Visigo.pic"
 VisigoPicBack::      INCBIN "pic/monback/Visigob.pic"
-
-; @@@ FREESPACE: about 560 bytes 4-14-2019
 
 SECTION "bank10", ROMX
 
@@ -1332,8 +1336,6 @@ INCLUDE "engine/give_pokemon.asm"
 
 INCLUDE "engine/predefs.asm"
 
-
-; @@@ FREESPACE: about 1280 bytes 4-14-2019
 
 SECTION "bank14", ROMX
 
@@ -1919,7 +1921,6 @@ Facility_GFX:      INCBIN "gfx/tilesets/facility.2bpp"
 Facility_Block:    INCBIN "gfx/blocksets/facility.bst"
 	ds 1
 
-; @@@ FREESPACE: about 2656 bytes 4-14-2019
 
 SECTION "bank1B", ROMX
 

@@ -46,21 +46,21 @@ MoveEnd:
 	move TACKLE,       NO_ADDITIONAL_EFFECT,        35, NORMAL,   100, 5
 	move BODY_SLAM,    PARALYZE_SIDE_EFFECT2,       85, NORMAL,   100, 2
 	move WRAP,         TRAPPING_EFFECT,             15, NORMAL,    75, 4
-	move TAKE_DOWN,    RECOIL_EFFECT,               90, NORMAL,   100, 2
+	move TAKE_DOWN,    RECOIL_EFFECT,               80, NORMAL,   100, 3
 	move THRASH,       THRASH_PETAL_DANCE_EFFECT,   90, NORMAL,   100, 1
-	move DOUBLE_EDGE,  RECOIL_EFFECT,              100, NORMAL,   100, 2
-	move TAIL_WHIP,    DEFENSE_DOWN1_EFFECT,         0, NORMAL,   100, 4
+	move DOUBLE_EDGE,  RECOIL_EFFECT,              110, NORMAL,   100, 2
+	move TAIL_WHIP,    DEFENSE_DOWN1_EFFECT,         0, BIRD,     100, 4
 	move POISON_STING, POISON_SIDE_EFFECT1,         30, POISON,   100, 5
 	move TWINEEDLE,    TWINEEDLE_EFFECT,            25, BUG,      100, 4
 	move PIN_MISSILE,  TWO_TO_FIVE_ATTACKS_EFFECT,  15, BUG,      100, 3
-	move LEER,         DEFENSE_DOWN1_EFFECT,         0, NORMAL,   100, 5
+	move LEER,         DEFENSE_DOWN1_EFFECT,         0, BIRD,   100, 5
 	move BITE,         FLINCH_SIDE_EFFECT1,         60, NORMAL,   100, 4
-	move GROWL,        ATTACK_DOWN1_EFFECT,          0, NORMAL,   100, 4
-	move ROAR,         SWITCH_AND_TELEPORT_EFFECT,   0, NORMAL,   100, 2
-	move SING,         SLEEP_EFFECT,                 0, NORMAL,    80, 2
-	move SUPERSONIC,   CONFUSION_EFFECT,             0, NORMAL,   100, 2
-	move SONICBOOM,    SPECIAL_DAMAGE_EFFECT,        1, NORMAL,   100, 5 ; dmg = lv
-	move DISABLE,      DISABLE_EFFECT,               0, NORMAL,   100, 2
+	move GROWL,        ATTACK_DOWN1_EFFECT,          0, BIRD,   100, 4
+	move ROAR,         SWITCH_AND_TELEPORT_EFFECT,   0, BIRD,   100, 2
+	move SING,         SLEEP_EFFECT,                 0, BIRD,    80, 2
+	move SUPERSONIC,   CONFUSION_EFFECT,             0, BIRD,   100, 2
+	move SONICBOOM,    SPECIAL_DAMAGE_EFFECT,        1, ELECTRIC,   100, 5 ; dmg = lv
+	move DISABLE,      DISABLE_EFFECT,               0, PSYCHIC,   100, 2
 	move ACID,         DEFENSE_DOWN_SIDE_EFFECT,    60, POISON,   100, 3
 	move EMBER,        BURN_SIDE_EFFECT2,           40, FIRE,     100, 5
 	move FLAMETHROWER, BURN_SIDE_EFFECT2,           95, FIRE,     100, 2
@@ -78,7 +78,7 @@ MoveEnd:
 	move DRILL_PECK,   NO_ADDITIONAL_EFFECT,        80, FLYING,   100, 2
 	move SUBMISSION,   RECOIL_EFFECT,              100, FIGHTING, 100, 2
 	move LOW_KICK,     FLINCH_SIDE_EFFECT2,         50, FIGHTING, 100, 3
-	move COUNTER,      NO_ADDITIONAL_EFFECT,         1, FIGHTING, 100, 3
+	move COUNTER,      NO_ADDITIONAL_EFFECT,         1, FIGHTING, 100, 4
 	move SEISMIC_TOSS, SPECIAL_DAMAGE_EFFECT,        1, FIGHTING, 100, 5 ; dmg = lv
 	move STRENGTH,     NO_ADDITIONAL_EFFECT,        80, NORMAL,   100, 2
 	move ABSORB,       DRAIN_HP_EFFECT,             20, GRASS,    100, 5
@@ -156,7 +156,7 @@ MoveEnd:
 	move SKY_ATTACK,   CHARGE_EFFECT,              150, FLYING,   100, 4
 	move TRANSFORM,    TRANSFORM_EFFECT,             0, NORMAL,   100, 1
 	move BUBBLE,       SPEED_DOWN_SIDE_EFFECT,      20, WATER,    100, 5
-	move DIZZY_PUNCH,  CONFUSION_SIDE_EFFECT,       70, FIGHTING, 100, 2
+	move DIZZY_PUNCH,  CONFUSION_SIDE_EFFECT,       70, FIGHTING, 100, 3
 	move SPORE,        SLEEP_EFFECT,                 0, GRASS,    100, 1
 	move FLASH,        ACCURACY_DOWN1_EFFECT,        0, NORMAL,   100, 3
 	move PSYWAVE,      SPECIAL_DAMAGE_EFFECT,        1, PSYCHIC,  100, 5 ; psywave is weird man
@@ -171,7 +171,7 @@ MoveEnd:
 	move HYPER_FANG,   FLINCH_SIDE_EFFECT1,         80, NORMAL,   100, 2
 	move SHARPEN,      ATTACK_UP1_EFFECT,            0, BIRD,	  100, 5
 	move CONVERSION,   CONVERSION_EFFECT,            0, NORMAL,   100, 2
-	move TRI_ATTACK,   NO_ADDITIONAL_EFFECT,        80, NORMAL,   100, 2
+	move TRI_ATTACK,   NO_ADDITIONAL_EFFECT,        90, NORMAL,   100, 3
 	move SUPER_FANG,   SUPER_FANG_EFFECT,            1, NORMAL,   100, 2
 	move SLASH,        NO_ADDITIONAL_EFFECT,        70, NORMAL,   100, 2 ; high crit chance
 	move SUBSTITUTE,   SUBSTITUTE_EFFECT,            0, NORMAL,   100, 2
@@ -193,5 +193,6 @@ MoveEnd:
 	move MIND_SPARK,   FLINCH_SIDE_EFFECT2,			20,	PSYCHIC,  100, 4 ; 
 	move STAMPEDE, 	   FLINCH_SIDE_EFFECT2,		   120,	NORMAL,   100, 1 ; 
 	move FORKING_BOLT, ATTACK_TWICE_EFFECT,       	30, ELECTRIC, 100, 4
+	move SUMMON_SWARM, PARALYZE_SIDE_EFFECT1,       90, BUG, 	  100, 2
 	;END MODS	
 	move STRUGGLE,     RECOIL_EFFECT,               50, BIRD,     100, 40 ; STRUGGLE MUST GO LAST

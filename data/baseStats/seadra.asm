@@ -6,7 +6,7 @@ db 85 ; base speed
 db 95 ; base special
 db WATER ; species type 1
 db DRAGON ; species type 2
-db 75 ; catch rate
+db CAP_HARD_MIN ; catch rate
 db 155 ; base exp yield
 INCBIN "pic/bmon/seadra.pic",0,1 ; 66, sprite dimensions
 dw SeadraPicFront

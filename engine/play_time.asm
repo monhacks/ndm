@@ -65,7 +65,7 @@ CountDownIgnoreInputBitReset:
 	ld [hJoyHeld], a
 	ret
 
-; MOD: these event flags are SET every 30 minutes of play time!
+; MOD: these event flags are SET every 20 minutes of play time!
 ; Put stuff here that you want to happen regularly, like being
 ; able to rematch key trainers (i.e. gym leaders)
 

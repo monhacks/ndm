@@ -6,7 +6,7 @@ db 72 ; base speed
 db 25 ; base special
 db NORMAL ; species type 1
 db NORMAL ; species type 2
-db 255 ; catch rate
+db CAP_EASY_MIN ; catch rate
 db 57 ; base exp yield
 INCBIN "pic/bmon/rattata.pic",0,1 ; 55, sprite dimensions
 dw RattataPicFront

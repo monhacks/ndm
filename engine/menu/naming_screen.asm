@@ -390,7 +390,7 @@ PrintNicknameAndUnderscores:
 .pokemon1
 	ld b, 10 ; pokemon max name length
 .playerOrRival1
-	ld a, $76 ; underscore tile id
+	ld a, $C0 ; underscore tile id
 .placeUnderscoreLoop
 	ld [hli], a
 	dec b
@@ -422,7 +422,7 @@ PrintNicknameAndUnderscores:
 	ld b, $0
 	coord hl, 10, 3
 	add hl, bc
-	ld [hl], $77 ; raised underscore tile id
+	ld [hl], $C1 ; raised underscore tile id
 	ret
 
 DakutensAndHandakutens:

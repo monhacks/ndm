@@ -1,8 +1,12 @@
 _VermilionCityText1::
-	text "VERMILION is"
-	line "still as pretty"
-	cont "as it was"
-	cont "decades ago!"
+	text "VERMILION is still"
+	line "as pretty as it"
+	cont "was decades ago!"
+	
+	para "When settlers"
+	line "first arrived by"
+	cont "sea, they landed"
+	cont "right here!"
 	
 	para "All these sea"
 	line "cottages are"
