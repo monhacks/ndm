@@ -1,0 +1,25 @@
+Route 1 - pallet to viridian - PALLET NATURE TRAIL
+Route 2 - viridian to pewter - VIRIDIAN MEADOW
+Route 3 - east pewter - PEWTER FOOTHILLS
+Route 4 - west cerulean, mt moon - CERULEAN RIVER
+Route 5 - cerulean to saffron - SAFFRON MEADOW 
+Route 6 - saffron to vermilion - VERMILION FIELD
+Route 7 - saffron to celadon - SAFFRON APARTMENTS
+Route 8 - saffron to violet - SAFFRON SUBURBS
+Route 9 - east cerulean - CERULEAN VALLEY
+Route 10 - north lavender - LAVENDER GULF
+Route 11 - east vermilion - VERMILION STEPPE
+Route 12 - south lavender - PORT LAVENDER
+Route 13 - FUCHSIA MARSH
+Route 14 - fuchsia-lavender small elbow
+Route 15 - east fuchsia - FUCHSIA PLAINS
+Route 16 - viridian to celadon - CELADON BAY
+Route 17 - *UNUTILIZED, FORMER CYCLING ROAD*
+Route 18 - *UNUTILIZED, WEST OF FUCHSIA* 
+Route 19 - south fuchsia  - FUCHSIA BEACH
+Route 20 - seafoam, fuchsia to cinnabar - KANTO SEA
+Route 21 - pallet to cinnabar - 
+Route 22 - viridian to indigo - 
+Route 23 - victory road
+Route 24 - vermilion to fuchsia - VERMILION BAY
+Route 25 - *UNUTILIZED, FORMER BILL'S*
