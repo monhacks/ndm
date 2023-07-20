@@ -49,7 +49,7 @@ ItemNames:
 	db "CARD KEY@" ; removed
 	db "NUGGET@" ; findable i guess
 	db "AXE@" ; earned
-	db "POKé DOLL@" ; tool mart
+	db "TARGET DUMMY@" ; tool mart, was pokedoll
 	db "PANACEA@" ; medicine mart, former full heal
 	db "REVIVE@" ; medicine mart
 	db "MAX REVIVE@" ; rare item
@@ -76,7 +76,7 @@ ItemNames:
 	db "EXP.ALL@" ; might rework this but removed for now
 	db "OLD ROD@" ; removed, single item converged to super rod
 	db "GOOD ROD@" ; removed, single item converged to super rod
-	db "SUPER ROD@" ; earned 
+	db "FISHING ROD@" ; earned , was Super Rod
 	db "PP UP@" ; removed 
 	db "ETHER@" ; medicine mart 
 	db "MAX ETHER@" ; removed, redundant 

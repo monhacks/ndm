@@ -17,9 +17,10 @@ _CeladonPokecenterText2::
 	done
 
 _CeladonPokecenterText3::
-	text "Just between you"
-	line "and me, I think"
-	cont "CELADON is a"
-	cont "smelly dump!"
+	text "If you need"
+	line "help, use the"
+	cont "other counter."
 	
+	para "I'm fixing this"
+	line "healing machine."
 	done

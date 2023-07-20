@@ -5,7 +5,7 @@ db 80 ; base defense
 db 90 ; base speed
 db 40 ; base special
 db NORMAL ; species type 1
-db NORMAL ; species type 2
+db FIGHTING ; species type 2
 db CAP_HARD_MIN ; catch rate
 db 175 ; base exp yield
 INCBIN "pic/bmon/kangaskhan.pic",0,1 ; 77, sprite dimensions

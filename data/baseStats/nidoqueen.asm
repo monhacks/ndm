@@ -5,7 +5,7 @@ db 87 ; base defense
 db 76 ; base speed
 db 75 ; base special
 db POISON ; species type 1
-db GROUND ; species type 2
+db NORMAL ; species type 2
 db CAP_HARD ; catch rate
 db 194 ; base exp yield
 INCBIN "pic/bmon/nidoqueen.pic",0,1 ; 77, sprite dimensions

@@ -121,18 +121,49 @@ RegainedHealthText:
 
 
 SecondWindEffect_:
+	ld b, NUM_MOVES ; A Pokémon has 4 moves
+	ld hl, wBattleMonMoves ;hl = the mon using second wind's moves (the type of move, not their pp)
 	ld a, [H_WHOSETURN]
 	and a
-	;load useful variables
-	ld de, wBattleMonHP
-	ld hl, wBattleMonMaxHP
-	ld a, [wPlayerMoveNum]
 	jr z, .swEffect
-	ld de, wEnemyMonHP
-	ld hl, wEnemyMonMaxHP
-	ld a, [wEnemyMoveNum]
+	ld hl, wEnemyMonMoves
 .swEffect
-	; ??? lol gotta code this 
+	; this loop restores PP to a move (starting at the first, iterating through) unless it is SECOND_WIND
+	
+	ld a, [hl] ; a is now Moves 
+
+	push hl
+	push de
+	push bc
+
+	ld hl, Moves
+	ld bc, MoveEnd - Moves
+	call AddNTimes
+	ld de, wcd6d
+	ld a, BANK(Moves)
+	call FarCopyData
+	ld a, [wcd6d + 5] ; PP is byte 5 of move data
+
+	pop bc
+	pop de
+	pop hl
+
+	inc de
+	push bc
+	ld b, a
+	ld a, [hl]
+	and $c0
+	add b
+	ld [hl], a
+	pop bc
+
+.nextmove
+	dec b
+	jr nz, .swEffect
+	
+	
+	
+	
 .playAnim
 	ld hl, PlayCurrentMoveAnimation
 	call BankswitchEtoF

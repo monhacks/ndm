@@ -32,7 +32,7 @@ Route4Name:
 Route5Name:
 	db "SAFFRON MEADOW@"
 Route6Name:
-	db "ROUTE 6@"
+	db "VERMILION FIELD@"
 Route7Name:
 	db "SAFFRON APARTMENTS@"
 Route8Name:

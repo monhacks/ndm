@@ -8,7 +8,7 @@ ItemPrices:
 	money 1	; SURFBOARD - MOD?
 	money 1000  ; SAFARI_BALL
 	money 0     ; POKEDEX
-	money 4450  ; MOON_STONE
+	money 4500  ; MOON_STONE
 	money 50   ; ANTIDOTE
 	money 50   ; BURN_HEAL
 	money 50   ; ICE_HEAL
@@ -27,12 +27,12 @@ ItemPrices:
 	money 0     ; MARSHBADGE
 	money 0     ; VOLCANOBADGE
 	money 0     ; EARTHBADGE
-	money 550   ; ESCAPE_ROPE
+	money 500   ; ESCAPE_ROPE
 	money 300   ; REPEL     ------- only one tier of repel in this game
 	money 0     ; OLD_AMBER
-	money 2100  ; FIRE_STONE
-	money 2100  ; THUNDER_STONE
-	money 2100  ; WATER_STONE
+	money 2500  ; FIRE_STONE
+	money 2500  ; THUNDER_STONE
+	money 2500  ; WATER_STONE
 	money 2500  ; HP_UP
 	money 2500  ; PROTEIN
 	money 2500  ; IRON
@@ -45,11 +45,11 @@ ItemPrices:
 	money 0     ; LANTERN - MOD
 	money 0     ; BIKE_VOUCHER
 	money 950   ; X_ACCURACY
-	money 2100  ; LEAF_STONE
+	money 2500  ; LEAF_STONE
 	money 0     ; CARD_KEY
 	money 10000 ; NUGGET
 	money 0     ; SCYTHE - MOD
-	money 1000  ; POKE_DOLL
+	money 200   ; POKE_DOLL
 	money 200   ; FULL_HEAL ; PANACEA
 	money 1500  ; REVIVE
 	money 5000  ; MAX_REVIVE

@@ -47,7 +47,6 @@ PrintType_:
 	ld e, a
 	ld d, [hl]
 	pop hl
-	coord hl, 1, 9
 	jp PlaceString
 
 INCLUDE "text/type_names.asm"

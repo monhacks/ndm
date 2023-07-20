@@ -398,6 +398,13 @@ _PewterCityPokecenterGuyText::
 	cont "the MT. MOON"
 	cont "#MON CENTER."
 	
+	para "What a weird"
+	line "business model."
+	cont "Like, you just"
+	cont "pick up a rock"
+	cont "and sell it?"
+	cont "Dang."
+	
 	para "If I could get"
 	line "away with being"
 	cont "a rock salesman"
@@ -437,8 +444,14 @@ _LavenderPokecenterGuyText::
 	cont "you wore a skull."
 	
 	para "How would it fit"
-	line "though? What a"
-	cont "mystery."
+	line "though? Like, a"
+	cont "skull has to be"
+	cont "smaller than a"
+	cont "head, right?"
+	
+	para "This world sure"
+	line "is full of"
+	cont "mysteries!"
 	done
 
 _MtMoonPokecenterBenchGuyText::
@@ -521,10 +534,11 @@ _FuchsiaCityPokecenterGuyText::
 
 _CinnabarPokecenterGuyText::
 	text "Wouldn't it be"
-	line "awful if the volcano"
-	cont "errupted? Good"
-	cont "thing that will"
-	cont "never happen."
+	line "awful if the"
+	cont "volcano errupted?"
+	
+	para "Good thing that"
+	line "will never happen!"
 	done
 
 _SaffronCityPokecenterGuyText1::
@@ -532,12 +546,23 @@ _SaffronCityPokecenterGuyText1::
 	line "must have cool"
 	cont "catchphrases."
 	
-	para "What's yours?"
+	para "You know, when"
+	line "you lock eyes"
+	cont "with someone and"
+	cont "feel the urge"
+	cont "to battle?"
 	
-	para "Mine would be..."
+	para "What's yours?"
+	line "Mine would be..."
 	
 	para "IT'S #MON"
 	line "TIME!!!"
+	
+	para "..."
+	
+	para "Maybe it could"
+	line "use a few"
+	cont "revisions..."
 	done
 
 _SaffronCityPokecenterGuyText2::
@@ -551,8 +576,14 @@ _CeladonCityHotelText::
 	done
 
 _BookcaseText::
-	text "Crammed full of"
-	line "#MON books!"
+	text "There's too many"
+	line "books here to"
+	cont "look through"
+	cont "them all."
+	
+	para "Their knowledge"
+	line "will have to be"
+	cont "lost on you."
 	done
 
 _NewBicycleText::
@@ -902,8 +933,16 @@ _IndigoPlateauStatuesText3::
 	done
 
 _PokemonBooksText::
-	text "Crammed full of"
-	line "#MON books!"
+	text "There's too many"
+	line "books here to"
+	cont "look through"
+	cont "them all right"
+	cont "now."
+	
+	para "Their knowledge"
+	line "will have to be"
+	cont "lost on you."
+	
 	done
 
 _DiglettSculptureText::
@@ -1806,7 +1845,7 @@ _HisNameIsText::
 	prompt
 
 _DifficultySetText::
-	text "Good Luck!"
+	text "Good luck!"
 	prompt
 
 _WillBeTradedText::
@@ -2346,11 +2385,11 @@ _PokemonFaintedText::
 	done
 
 _PlayerBlackedOutText::
-	text "<PLAYER> is out of"
-	line "useable #MON!"
+	text "Shoot! I'm out"
+	line "healthy #MON!"
 
-	para "<PLAYER> blacked"
-	line "out!"
+	para "I can't keep"
+	line "fighting!"
 	prompt
 
 _RepelWoreOffText::
@@ -2610,12 +2649,12 @@ _BoxIsFullText::
 	text "There's no more"
 	line "room for #MON!"
 
-	para "The #MON BOX"
-	line "is full and can't"
+	para "The PC BOX is"
+	line "full and can't"
 	cont "accept any more!"
 
 	para "Change the BOX at"
-	line "a #MON CENTER!"
+	line "a #CENTER!"
 	done
 
 INCLUDE "text/maps/PalletTown.asm"

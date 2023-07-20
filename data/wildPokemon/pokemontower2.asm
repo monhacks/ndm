@@ -1,3 +1,13 @@
 TowerMons2:
-	db $00
+	db $0f
+	db 2,CATERPIE
+	db 2,WEEDLE
+	db 2,BELLSPROUT
+	db 2,METAPOD
+	db 2,KAKUNA
+	db 2,PARAS
+	db 5,BEEDRILL
+	db 5,BUTTERFREE
+	db 7,TANGELA
+	db 10,VICTREEBEL
 	db $00

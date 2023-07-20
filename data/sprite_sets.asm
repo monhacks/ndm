@@ -45,7 +45,7 @@ MapSpriteSets:
 ; 02: sprite set ID if in the West or North side
 ; 03: sprite set ID if in the East or South side
 SplitMapSpriteSets:
-	db $02,$25,$02,$01 ; $f1
+	db $02,$26,$02,$01 ; $f1
 	db $02,$32,$02,$03 ; $f2
 	db $01,$39,$04,$08 ; $f3
 	db $02,$15,$03,$08 ; $f4
@@ -55,7 +55,7 @@ SplitMapSpriteSets:
 	db $01,$35,$01,$0A ; $f8
 	db $02,$20,$02,$07 ; $f9
 	db $02,$02,$07,$04 ; $fa
-	db $01,$11,$05,$07 ; $fb
+	db $01,$18,$05,$07 ; $fb
 	db $01,$03,$07,$03 ; $fc
 
 SpriteSets:

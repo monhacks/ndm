@@ -4,8 +4,8 @@ db 45 ; base attack
 db 35 ; base defense
 db 55 ; base speed
 db 40 ; base special
-db POISON ; species type 1
-db FLYING ; species type 2
+db FLYING ; species type 1
+db BUG ; species type 2
 db CAP_EASY_MIN ; catch rate
 db 54 ; base exp yield
 INCBIN "pic/bmon/zubat.pic",0,1 ; 55, sprite dimensions

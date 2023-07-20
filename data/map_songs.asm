@@ -15,7 +15,7 @@
 
 ; Music_Dungeon1 - ROCKET Hideout! Some bad stuff is going down
 ; Music_Dungeon2 - da. da. da. da. DA. DA. DA. DA. Viridian forest
-; Music_Dungeon3 - the consistent bass line  da.. na... danaDANAdana... (mt moon)
+; Music_Dungeon3 - the consistent bass line  da.. na... dana DANA dana... (mt moon)
 
 ; Music_GameCorner - the slot machine music
 ; Music_SSAnne - it's the ss anne theme omg duh 
@@ -75,13 +75,13 @@ MapSongBanks:
 	db MUSIC_ROUTES2, BANK(Music_Routes2) ; ROUTE_24
 	db MUSIC_ROUTES2, BANK(Music_Routes2) ; ROUTE_25
 	db MUSIC_PALLET_TOWN, BANK(Music_PalletTown) ; REDS_HOUSE_1F
-	db MUSIC_DUNGEON2, BANK(Music_Dungeon2) ; REDS_HOUSE_2F - MOD lapras cave
+	db MUSIC_DUNGEON3, BANK(Music_Dungeon3) ; REDS_HOUSE_2F - MOD lapras cave
 	db MUSIC_DUNGEON1, BANK(Music_Dungeon1) ; BLUES_HOUSE - MOD - Visigo Dungeon F1
 	db MUSIC_OAKS_LAB, BANK(Music_OaksLab) ; OAKS_LAB
 	db MUSIC_POKECENTER, BANK(Music_Pokecenter) ; VIRIDIAN_POKECENTER
 	db MUSIC_POKECENTER, BANK(Music_Pokecenter) ; VIRIDIAN_MART
 	db MUSIC_ROUTES2, BANK(Music_Routes2) ; VIRIDIAN_SCHOOL_HOUSE - MOD Viridian-Celadon East gate
-	db MUSIC_DUNGEON2, BANK(Music_Dungeon2) ; VIRIDIAN_NICKNAME_HOUSE - MOD Route1 Cave
+	db MUSIC_DUNGEON3, BANK(Music_Dungeon3) ; VIRIDIAN_NICKNAME_HOUSE - MOD Route1 Cave
 	db MUSIC_GYM, BANK(Music_Gym) ; VIRIDIAN_GYM
 	db MUSIC_DUNGEON2, BANK(Music_Dungeon2) ; DIGLETTS_CAVE_ROUTE_2
 	db MUSIC_CITIES1, BANK(Music_Cities1) ; VIRIDIAN_FOREST_NORTH_GATE
@@ -94,7 +94,7 @@ MapSongBanks:
 	db MUSIC_GYM, BANK(Music_Gym) ; PEWTER_GYM
 	db MUSIC_CITIES1, BANK(Music_Cities1) ; PEWTER_NIDORAN_HOUSE
 	db MUSIC_POKECENTER, BANK(Music_Pokecenter) ; PEWTER_MART
-	db MUSIC_GYM, BANK(Music_Gym) ; PEWTER_SPEECH_HOUSE --  MOD, side field
+	db MUSIC_GYM, BANK(Music_Gym) ; PEWTER_SPEECH_HOUSE --  MOD, path to gym
 	db MUSIC_POKECENTER, BANK(Music_Pokecenter) ; PEWTER_POKECENTER
 	db MUSIC_DUNGEON3, BANK(Music_Dungeon3) ; MT_MOON_1F
 	db MUSIC_DUNGEON3, BANK(Music_Dungeon3) ; MT_MOON_B1F
@@ -179,13 +179,13 @@ MapSongBanks:
 	db MUSIC_CELADON, BANK(Music_Celadon) ; CELADON_CHIEF_HOUSE
 	db MUSIC_CELADON, BANK(Music_Celadon) ; CELADON_HOTEL
 	db MUSIC_POKECENTER, BANK(Music_Pokecenter) ; LAVENDER_POKECENTER
-	db MUSIC_POKEMON_TOWER, BANK(Music_PokemonTower) ; POKEMON_TOWER_1F
-	db MUSIC_POKEMON_TOWER, BANK(Music_PokemonTower) ; POKEMON_TOWER_2F
-	db MUSIC_POKEMON_TOWER, BANK(Music_PokemonTower) ; POKEMON_TOWER_3F
-	db MUSIC_POKEMON_TOWER, BANK(Music_PokemonTower) ; POKEMON_TOWER_4F
-	db MUSIC_POKEMON_TOWER, BANK(Music_PokemonTower) ; POKEMON_TOWER_5F
-	db MUSIC_POKEMON_TOWER, BANK(Music_PokemonTower) ; POKEMON_TOWER_6F
-	db MUSIC_POKEMON_TOWER, BANK(Music_PokemonTower) ; POKEMON_TOWER_7F
+	db MUSIC_DUNGEON2, BANK(Music_Dungeon2) ; POKEMON_TOWER_1F ;MOD: side/connector forests
+	db MUSIC_DUNGEON2, BANK(Music_Dungeon2) ; POKEMON_TOWER_2F
+	db MUSIC_DUNGEON2, BANK(Music_Dungeon2) ; POKEMON_TOWER_3F
+	db MUSIC_DUNGEON2, BANK(Music_Dungeon2) ; POKEMON_TOWER_4F
+	db MUSIC_DUNGEON2, BANK(Music_Dungeon2) ; POKEMON_TOWER_5F
+	db MUSIC_DUNGEON2, BANK(Music_Dungeon2) ; POKEMON_TOWER_6F
+	db MUSIC_DUNGEON2, BANK(Music_Dungeon2) ; POKEMON_TOWER_7F
 	db MUSIC_LAVENDER, BANK(Music_Lavender) ; MR_FUJIS_HOUSE
 	db MUSIC_POKECENTER, BANK(Music_Pokecenter) ; LAVENDER_MART
 	db MUSIC_LAVENDER, BANK(Music_Lavender) ; LAVENDER_CUBONE_HOUSE

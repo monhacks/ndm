@@ -13,7 +13,7 @@ ENDM
 	mapconst VERMILION_CITY,                18, 20 ; $05
 	mapconst CELADON_CITY,                  18, 25 ; $06
 	mapconst FUCHSIA_CITY,                  18, 20 ; $07
-	mapconst CINNABAR_ISLAND,                9, 10 ; $08
+	mapconst CINNABAR_ISLAND,               12, 15 ; $08
 	mapconst INDIGO_PLATEAU,                 9, 10 ; $09
 	mapconst SAFFRON_CITY,                  18, 20 ; $0A
 	mapconst UNUSED_MAP_0B,                  0,  0 ; $0B
@@ -23,7 +23,7 @@ ENDM
 	mapconst ROUTE_4,                        9, 45 ; $0F
 	mapconst ROUTE_5,                       18, 10 ; $10
 	mapconst ROUTE_6,                       18, 10 ; $11
-	mapconst ROUTE_7,                        9, 10 ; $12
+	mapconst ROUTE_7,                        9, 14 ; $12
 	mapconst ROUTE_8,                        9, 30 ; $13
 	mapconst ROUTE_9,                        9, 30 ; $14
 	mapconst ROUTE_10,                      36, 10 ; $15
@@ -143,12 +143,12 @@ ENDM
 	mapconst GAME_CORNER,                    9, 10 ; $87
 	mapconst CELADON_MART_5F,                4, 10 ; $88
 	mapconst GAME_CORNER_PRIZE_ROOM,         4,  5 ; $89
-	mapconst CELADON_DINER,                  4,  5 ; $8A
+	mapconst CELADON_DINER,                  6,  8 ; $8A ; mod, cafe
 	mapconst CELADON_CHIEF_HOUSE,            4,  4 ; $8B
 	mapconst CELADON_HOTEL,                  4,  7 ; $8C
 	mapconst LAVENDER_POKECENTER,            4,  4 ; $8D
 	mapconst POKEMON_TOWER_1F,               15, 11 ; $8E MOD: side forest1
-	mapconst POKEMON_TOWER_2F,               9, 10 ; $8F
+	mapconst POKEMON_TOWER_2F,               23, 10 ; $8F MOD: side forest 2
 	mapconst POKEMON_TOWER_3F,               9, 10 ; $90
 	mapconst POKEMON_TOWER_4F,               9, 10 ; $91
 	mapconst POKEMON_TOWER_5F,               9, 10 ; $92

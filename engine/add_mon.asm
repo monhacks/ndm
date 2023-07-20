@@ -76,12 +76,28 @@ _AddPartyMon:
 	inc de
 	pop hl
 	push hl
+	;ld a, $98     ; set enemy trainer mon IVs to fixed average values
+	;ld b, $88
+	ld a, [wGameDifficulty] ; MOD: set trainer mon stats to difficulty scaling values
+	cp $1
+	jr z, .diffHard
+	jr nc, .diffMaster	
+	;standard difficulty: 8/9 DVs, because gamefreak said so
+	ld a, $89
+	ld b, $89
+	jr .resolveDiff
+.diffHard ; trainer DVs are 75%
+	ld a, $bb
+	ld b, $bb
+	jr .resolveDiff
+.diffMaster ; trainers have nearly perfect pokemon: 14s in everything. cannot be strange.
+	ld a, $ee
+	ld b, $ee
+.resolveDiff	
 	ld a, [wMonDataLocation]
 	and $f
-	ld a, $98     ; set enemy trainer mon IVs to fixed average values
-	ld b, $88
 	jr nz, .next4
-
+	
 ; If the mon is being added to the player's party, update the pokedex.
 	ld a, [wcf91]
 	ld [wd11e], a

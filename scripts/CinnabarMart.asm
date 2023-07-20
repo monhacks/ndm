@@ -2,7 +2,8 @@ CinnabarMart_Script:
 	jp EnableAutoTextBoxDrawing
 
 CinnabarMart_TextPointers:
-	dw CinnabarCashierText
+	dw ToolCashierText
+	dw PotionCashierText
 	dw CinnabarMartText2
 	dw CinnabarMartText3
 

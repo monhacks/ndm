@@ -34,6 +34,10 @@ SetDefaultNames:
 OakSpeech:
 	ld a, $FF
 	call PlaySound ; stop music
+	ld a, BANK(Music_GameCorner)
+	ld c, a
+	ld a, MUSIC_GAME_CORNER
+	call PlayMusic
 	call ClearScreen
 	call LoadTextBoxTilePatterns
 	call SetDefaultNames
@@ -246,7 +250,7 @@ IntroDisplayPicCenteredOrUpperRight:
 	pop bc
 	ld a, c
 	and a
-	coord hl, 15, 1
+	coord hl, 14, 1
 	jr nz, .next
 	coord hl, 6, 4
 .next

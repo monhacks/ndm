@@ -663,7 +663,7 @@ HandlePoisonBurnLeechSeed_DecreaseOwnHP:
 	rr c
 	srl b
 	rr c
-	srl c
+	;srl c
 	srl c         ; c = max HP/16 (assumption: HP < 1024)
 	ld a, c
 	and a
@@ -1983,6 +1983,14 @@ DrawEnemyHUDAndHPBar:
 	coord hl, 1, 0
 	call CenterMonName
 	call PlaceString
+	
+	ld a, [wEnemyBattleStatus3]
+	bit ALREADY_CAPTURED, a ; check for captured
+	jr z, .skipBall
+	coord hl, 1, 1
+	ld a, $79
+	ld [hl], a	
+.skipBall
 	coord hl, 4, 1
 	push hl
 	inc hl
@@ -2943,7 +2951,7 @@ PrintMenuItem:
 	ld [H_AUTOBGTRANSFERENABLED], a
 	coord hl, 0, 8
 	ld b, 3
-	ld c, 9
+	ld c, 8
 	call TextBoxBorder
 	ld a, [wPlayerDisabledMove]
 	and a
@@ -2986,25 +2994,26 @@ PrintMenuItem:
 	and $3f
 	ld [wcd6d], a
 ; print TYPE/<type> and <curPP>/<maxPP>
-	coord hl, 7, 10
+	coord hl, 5, 10
 	ld de, PowerText
 	call PlaceString
-	coord hl, 8, 11
+	coord hl, 5, 11
 	ld de, PPText
 	call PlaceString	
-	coord hl, 4, 11
-	ld [hl], "/"
 	coord hl, 2, 11
+	ld [hl], "/"
+	coord hl, 0, 11
 	ld de, wcd6d ; current pp
 	lb bc, 1, 2
 	call PrintNumber
-	coord hl, 5, 11
+	coord hl, 2, 11
 	ld de, wMaxPP
 	lb bc, 1, 2
 	call PrintNumber ; print max PP
 	call GetCurrentMove
-	predef PrintMoveType ; print type, position coded as 1,9 in that fn
-	coord hl, 3, 10
+	coord hl, 1, 9
+	predef PrintMoveType ; print type
+	coord hl, 1, 10
 	ld de, wMovePower
 	lb bc, 1, 3
 	call PrintNumber ; print power
@@ -3317,9 +3326,9 @@ PlayerCalcMoveDamage:
 	call CalculateDamage
 	jp z, playerCheckIfFlyOrChargeEffect ; for moves with 0 BP, skip any further damage calculation and, for now, skip MoveHitTest
 	               ; for these moves, accuracy tests will only occur if they are called as part of the effect itself
-	call AdjustDamageForMoveType
 	call RandomizeDamage
 .moveHitTest
+	call AdjustDamageForMoveType ; MOD: this still happens now, even on set damage moves. i may regret this?
 	call MoveHitTest
 handleIfPlayerMoveMissed:
 	ld a, [wMoveMissed]
@@ -3479,19 +3488,20 @@ GetOutText:
 	TX_FAR _GetOutText
 	db "@"
 
-IsGhostBattle:
-	ld a, [wIsInBattle]
-	dec a
-	ret nz
-	ld a, [wCurMap]
-	cp POKEMON_TOWER_1F
-	jr c, .next
-	cp MR_FUJIS_HOUSE
-	jr nc, .next
-	ld b, SILPH_SCOPE
-	call IsItemInBag
-	ret z
-.next
+;MOD -  no ghost battles here. function remains because it is checked for in a few places and i can't be assed.
+IsGhostBattle: 
+	;ld a, [wIsInBattle]
+	;dec a
+	;ret nz
+	;ld a, [wCurMap]
+	;cp POKEMON_TOWER_1F
+	;jr c, .next
+	;cp MR_FUJIS_HOUSE
+	;jr nc, .next
+	;ld b, SILPH_SCOPE
+	;call IsItemInBag
+	;ret z
+;.next
 	ld a, 1
 	and a
 	ret
@@ -4655,8 +4665,10 @@ CriticalHitTest:
 	jr nc, .noFocusEnergyUsed
 	ld b, $ff                    ; cap at 255/256
 	jr .noFocusEnergyUsed
-.focusEnergyUsed
-	sla b
+.focusEnergyUsed	;force crits
+	ld a, $1
+	ld [wCriticalHitOrOHKO], a   ; set critical hit flag
+	ret
 .noFocusEnergyUsed
 	ld hl, HighCriticalMoves     ; table of high critical hit moves
 .Loop
@@ -4787,28 +4799,29 @@ ApplyAttackToEnemyPokemon:
 	ld a, [hl]
 	ld b, a ; Seismic Toss deals damage equal to the user's level ; MOD: and so does sonic boom and dragon rage
 	ld a, [wPlayerMoveNum]
-	cp PSYWAVE
-	jr nz, .storeDamage
+	;cp PSYWAVE
+	;jr nz, .storeDamage
 ; Psywave
-	ld a, [hl]
-	ld b, a
-	srl a
-	add b
-	ld b, a ; b = level * 1.5
+	;ld a, [hl]
+	;ld b, a
+	;srl a
+	;add b
+	;ld b, a ; b = level * 1.5
 ; loop until a random number in the range [1, b) is found
-.loop
-	call BattleRandom
-	and a
-	jr z, .loop
-	cp b
-	jr nc, .loop
-	ld b, a
+;.loop
+	;call BattleRandom
+	;and a
+	;jr z, .loop
+	;cp b
+	;jr nc, .loop
+	;ld b, a
 .storeDamage ; store damage value at b
 	ld hl, wDamage
 	xor a
 	ld [hli], a
 	ld a, b
 	ld [hl], a
+	call AdjustDamageForMoveType
 
 ApplyDamageToEnemyPokemon:
 	ld hl, wDamage
@@ -4898,22 +4911,22 @@ ApplyAttackToPlayerPokemon:
 	ld a, [hl]
 	ld b, a
 	ld a, [wEnemyMoveNum]
-	cp PSYWAVE
-	jr nz, .storeDamage
+	;cp PSYWAVE ; MOD: NO. NO NO NO. PSYWAVE JUST WORKS LIKE OTHER LEVEL = DMG moves.
+	;jr nz, .storeDamage
 ; Psywave
-	ld a, [hl]
-	ld b, a
-	srl a
-	add b
-	ld b, a ; b = attacker's level * 1.5
+	;ld a, [hl]
+	;ld b, a
+	;srl a
+	;add b
+	;ld b, a ; b = attacker's level * 1.5
 ; loop until a random number in the range [0, b) is found
 ; this differs from the range when the player attacks, which is [1, b)
 ; it's possible for the enemy to do 0 damage with Psywave, but the player always does at least 1 damage
-.loop
-	call BattleRandom
-	cp b
-	jr nc, .loop
-	ld b, a
+;.loop
+	;call BattleRandom
+	;cp b
+	;jr nc, .loop
+	;ld b, a
 .storeDamage
 	ld hl, wDamage
 	xor a
@@ -6130,6 +6143,9 @@ LoadEnemyMonData:
 	ld a, [wIsInBattle]
 	cp $2 ; is it a trainer battle?	
 	jr nz, .setRandomDVs ; wilds have random DVs
+	
+	; alright full confession time- this seems to be called sometimes, and sometimes it's the AddPartyMon function, i don't know why and where and can't be assed to figure it out. this code is probably redundant in a lot of ways, but it fixed my problem so we're just gonna live with that
+	
 	ld a, [wGameDifficulty]
 	cp $1
 	jr z, .diffHard
@@ -6774,6 +6790,22 @@ InitWildBattle:
 	ld [wIsInBattle], a
 	call LoadEnemyMonData
 	call DoBattleTransitionAndInitBattleVariables
+	; MOD: set already captured flag if already captured
+	ld a, [wEnemyMonSpecies2]
+	ld [wd11e], a
+	predef IndexToPokedex
+	ld a, [wd11e]
+	dec a
+	ld c, a
+	ld b, FLAG_TEST
+	ld hl, wPokedexOwned
+	predef FlagActionPredef
+	ld a, c
+	and a ; was the Pokémon already in the Pokédex?
+	jr z, .skipShowingBall ; if not, don't show the captured indicator	
+	ld hl, wEnemyBattleStatus3
+	set ALREADY_CAPTURED, [hl] ; setting this bit will cause the ball to appear
+.skipShowingBall 
 	ld a, [wCurOpponent]
 	cp MAROWAK
 	jr z, .isGhost

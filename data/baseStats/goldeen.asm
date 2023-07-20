@@ -5,7 +5,7 @@ db 60 ; base defense
 db 63 ; base speed
 db 50 ; base special
 db WATER ; species type 1
-db WATER ; species type 2
+db NORMAL ; species type 2
 db CAP_EASY_MIN ; catch rate
 db 111 ; base exp yield
 INCBIN "pic/bmon/goldeen.pic",0,1 ; 66, sprite dimensions

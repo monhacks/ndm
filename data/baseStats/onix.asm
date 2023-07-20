@@ -5,7 +5,7 @@ db 200 ; base defense
 db 70 ; base speed
 db 30 ; base special
 db ROCK ; species type 1
-db GROUND ; species type 2
+db NORMAL ; species type 2
 db CAP_MID_PLUS ; catch rate
 db 108 ; base exp yield
 INCBIN "pic/bmon/onix.pic",0,1 ; 77, sprite dimensions

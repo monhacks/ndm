@@ -4,8 +4,8 @@ db 110 ; base attack
 db 70 ; base defense
 db 100 ; base speed
 db 60 ; base special
-db NORMAL ; species type 1
-db FLYING ; species type 2
+db FLYING ; species type 1
+db FIGHTING ; species type 2
 db CAP_HARD_MIN ; catch rate
 db 158 ; base exp yield
 INCBIN "pic/bmon/dodrio.pic",0,1 ; 77, sprite dimensions

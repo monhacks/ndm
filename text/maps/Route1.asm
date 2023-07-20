@@ -53,8 +53,12 @@ _Route1Text3::
 	done
 	
 _Route1Text4::
-	text "ROUTE 1"
-	line "PALLET CAMP -"
-	cont "VIRIDIAN CITY"
+	text "PALLET NATURE"
+	line "TRAIL."
+	para "For your safety,"
+	line "use only marked"
+	cont "trails."
+	para "VIRIDIAN CITY"
+	line "1km NORTH"
 	done
 

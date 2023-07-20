@@ -250,7 +250,11 @@ ItemUseBall:
 	call Multiply
 
 ; Determine BallFactor. It's 8 for Great Balls and 12 for the others.
+; MOD: and 20 for ultra balls. i think this helps!
 	ld a, [wcf91]
+	cp ULTRA_BALL
+	ld a, 20
+	jr nz, .skip1
 	cp GREAT_BALL
 	ld a, 12
 	jr nz, .skip1
@@ -555,13 +559,13 @@ ItemUseBall:
 	ld hl, wPokedexOwned
 	predef FlagActionPredef
 	ld a, c
-	push af
+	push af ;af has result of did we already have it
 	ld a, [wd11e]
 	dec a
 	ld c, a
 	ld b, FLAG_SET
-	predef FlagActionPredef
-	pop af
+	predef FlagActionPredef ;set the flag that we caught it
+	pop af ;get back the old result of y/n do we have it
 
 	and a ; was the Pokémon already in the Pokédex?
 	jr nz, .skipShowingPokedexData ; if so, don't show the Pokédex data

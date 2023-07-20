@@ -740,7 +740,6 @@ wInGameTradeTextPointerTableIndex:: ; cd12
 wPlayerMonUnmodifiedAttack:: ; cd12
 	ds 1
 	
-wGameDifficulty:: ; MOD : 0 for standard, 1 for hard, 2 for master.
 wInGameTradeGiveMonName:: ; cd13
 	ds 1
 wPlayerMonUnmodifiedDefense:: ; cd14
@@ -1711,6 +1710,8 @@ wPlayerBattleStatus3:: ; d064
 ; bit 1 - light screen
 ; bit 2 - reflect
 ; bit 3 - transformed
+; ...
+; bit 7 - MOD: species owned in pokedex, only used for enemy
 	ds 1
 
 wEnemyStatsToDouble:: ; d065
@@ -2397,6 +2398,7 @@ wXBlockCoord:: ; d364
 wLastMap:: ; d365
 	ds 1
 
+wGameDifficulty:: ; MOD : 0 for standard, 1 for hard, 2 for master
 wUnusedD366:: ; d366
 	ds 1
 

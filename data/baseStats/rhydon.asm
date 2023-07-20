@@ -4,8 +4,8 @@ db 130 ; base attack
 db 120 ; base defense
 db 40 ; base speed
 db 45 ; base special
-db GROUND ; species type 1
-db ROCK ; species type 2
+db ROCK ; species type 1
+db NORMAL ; species type 2
 db CAP_HARD ; catch rate
 db 204 ; base exp yield
 INCBIN "pic/bmon/rhydon.pic",0,1 ; 77, sprite dimensions

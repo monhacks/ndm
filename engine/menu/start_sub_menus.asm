@@ -561,11 +561,11 @@ DrawTrainerInfo:
 	call TrainerInfo_FarCopyData
 	call EnableLCD
 	ld hl, wTrainerInfoTextBoxWidthPlus1
-	ld a, 12
+	ld a, 16 + 1
 	ld [hli], a
 	dec a
 	ld [hli], a
-	ld [hl], 8
+	ld [hl], 3
 	coord hl, 1, 0
 	call TrainerInfo_DrawTextBox
 	ld hl, wTrainerInfoTextBoxWidthPlus1
@@ -575,14 +575,14 @@ DrawTrainerInfo:
 	ld [hli], a
 	ld [hl], 3
 	coord hl, 1, 9
-	ld c, 9
 	call TrainerInfo_DrawTextBox
+	ld c, 18
 	coord hl, 0, 0
 	ld a, $d7
 	ld c, 18
 	call TrainerInfo_DrawVerticalLine
-	coord hl, 19, 9
-	ld c, 9
+	coord hl, 19, 0
+	ld c, 18
 	call TrainerInfo_DrawVerticalLine
 	coord hl, 5, 10
 	ld de, TrainerInfo_BadgesText
@@ -591,7 +591,21 @@ DrawTrainerInfo:
 	;ld de, TrainerInfo_NameMoneyTimeText
 	;call PlaceString
 
+	coord hl, 3, 4
+	ld a, $ec
+	ld [hli], a
+	ld [hli], a
+	ld [hl], a
+	coord hl, 3, 4
 	
+	ld a, [wGameDifficulty]
+	inc a
+.difficultyDarkLoop
+	ld [hl], $ed
+	inc hl
+	dec a
+	jr nz, .difficultyDarkLoop
+
 	coord hl, 3, 5
 	ld de, TrainerInfo_TrainerText0
 	call PlaceString
@@ -602,7 +616,7 @@ DrawTrainerInfo:
 	call PrintNumber ; ID Number
 	
 	
-	coord hl, 3, 7
+	coord hl, 3, 6
 	push hl
 	call CountNumBadgesOwned;
 	pop hl
@@ -623,7 +637,7 @@ DrawTrainerInfo:
 .placeRankText
 	call PlaceString
 	
-	coord hl, 3, 6
+	coord hl, 3, 7
 	
 	ld [hl], $e1 ; Pk
 	inc hl
@@ -657,6 +671,7 @@ DrawTrainerInfo:
 	ld de, wPlayTimeSeconds ; minutes
 	lb bc, LEADING_ZEROES | 1, 2
 	jp PrintNumber
+	
 
 TrainerInfo_FarCopyData:
 	ld a, BANK(TrainerInfoTextBoxTileGraphics)
@@ -672,25 +687,25 @@ TrainerInfo_BadgesText:
 	db $76," BADGES ",$76,"@"
 	
 TrainerInfo_TrainerText0:
-	db "TID: @"
+	db "TID",$d6,"@"
 
 TrainerInfo_RankText0:
-	db $76,"UNRANKED@"
+	db "UNRANKED@"
 	
 TrainerInfo_RankText1:
-	db $76," CLASS D@"
+	db "CLASS D@"
 	
 TrainerInfo_RankText2:
-	db $76," CLASS C@"
+	db "CLASS C@"
 	
 TrainerInfo_RankText3:
-	db $76," CLASS B@"
+	db "CLASS B@"
 	
 TrainerInfo_RankText4:
-	db $76," CLASS A@"
+	db "CLASS A@"
 	
 TrainerInfo_RankText5:
-	db $76," CLASS S@"
+	db "CLASS S@"
 	
 
 TrainerInfo_DrawTrainerRank:

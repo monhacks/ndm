@@ -181,6 +181,8 @@ MoveNames::
 	db "STAMPEDE@"
 	db "FORKING BOLT@"
 	db "SUMMON SWARM@"
+	db "SHATTER@"
+	db "VENOM SKEWER@"
 	
 	;END MODS
 	db "STRUGGLE@" ; struggle must go last

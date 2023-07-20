@@ -5,7 +5,7 @@ db 52 ; base defense
 db 41 ; base speed
 db 40 ; base special
 db POISON ; species type 1
-db POISON ; species type 2
+db NORMAL ; species type 2
 db CAP_EASY ; catch rate
 db 59 ; base exp yield
 INCBIN "pic/bmon/nidoranf.pic",0,1 ; 55, sprite dimensions

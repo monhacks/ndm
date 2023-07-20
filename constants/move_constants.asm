@@ -182,6 +182,8 @@ const_value = 1
 	const STAMPEDE     ; b2
 	const FORKING_BOLT ; b3
 	const SUMMON_SWARM ; b4
+	const SHATTER ; b5
+	const VENOM_SKEWER ; b6
 	;END MODS
 
 NUM_ATTACKS EQU const_value + -1

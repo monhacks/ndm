@@ -5,7 +5,7 @@ db 90 ; base defense
 db 55 ; base speed
 db 45 ; base special
 db ROCK ; species type 1
-db WATER ; species type 2
+db BUG ; species type 2
 db CAP_MID_MIN ; catch rate
 db 119 ; base exp yield
 INCBIN "pic/bmon/kabuto.pic",0,1 ; 55, sprite dimensions

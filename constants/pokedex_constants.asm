@@ -153,4 +153,4 @@ const_value = 1
 	const DEX_VISIGO     ; 151
 	const DEX_MEWTWO	 ; 152
 
-NUM_POKEMON    EQU 152
+NUM_POKEMON    EQU const_value - 1

@@ -518,7 +518,7 @@ WarpFound2::
 	ld a, [wCurMap]
 	ld [wLastMap], a
 	ld a, [wCurMapWidth]
-	ld [wUnusedD366], a ; not read
+	;ld [wUnusedD366], a ; not read  ; MOD: the difficulty is stored here now. how about NOT overwriting that!
 	ld a, [hWarpDestinationMap]
 	ld [wCurMap], a	
 	

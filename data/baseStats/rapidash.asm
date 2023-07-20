@@ -5,7 +5,7 @@ db 70 ; base defense
 db 105 ; base speed
 db 80 ; base special
 db FIRE ; species type 1
-db FIRE ; species type 2
+db NORMAL ; species type 2
 db CAP_HARD_MIN ; catch rate
 db 192 ; base exp yield
 INCBIN "pic/bmon/rapidash.pic",0,1 ; 77, sprite dimensions
@@ -13,9 +13,9 @@ dw RapidashPicFront
 dw RapidashPicBack
 ; attacks known at lvl 0
 db EMBER
-db TAIL_WHIP
 db STOMP
-db GROWL
+db 0
+db 0
 db 0 ; growth rate
 ; learnset
 	tmlearn 6,7,8

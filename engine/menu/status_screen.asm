@@ -149,8 +149,6 @@ StatusScreen:
 	ld de, wd11e
 	lb bc, LEADING_ZEROES | 1, 3
 	call PrintNumber ; Pokémon no.
-	coord hl, 11, 6
-	predef PrintMonType
 	ld hl, NamePointers2
 	call .GetStringPointer
 	ld d, h
@@ -213,6 +211,10 @@ StatusScreen:
 	inc de
 	lb bc, LEADING_ZEROES | 1, 2
 	call PrintNumber	
+	
+	
+	coord hl, 11, 6
+	predef PrintMonType
 	
 	call Delay3
 	call GBPalNormal

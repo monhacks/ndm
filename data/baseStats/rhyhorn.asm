@@ -4,8 +4,8 @@ db 85 ; base attack
 db 95 ; base defense
 db 25 ; base speed
 db 30 ; base special
-db GROUND ; species type 1
-db ROCK ; species type 2
+db ROCK ; species type 1
+db NORMAL ; species type 2
 db CAP_MID_MIN ; catch rate
 db 135 ; base exp yield
 INCBIN "pic/bmon/rhyhorn.pic",0,1 ; 77, sprite dimensions

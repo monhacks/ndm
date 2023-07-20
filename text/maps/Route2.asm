@@ -1,7 +1,7 @@
 _Route2Text3::
-	text "ROUTE 2"
-	line "VIRIDIAN CITY -"
-	cont "PEWTER CITY"
+	text "VIRIDIAN MEADOW"
+	para "PEWTER CITY"
+	line "3km NORTH"
 	done
 
 _Route2Text4::

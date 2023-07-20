@@ -5,7 +5,7 @@ db 110 ; base defense
 db 65 ; base speed
 db 55 ; base special
 db GROUND ; species type 1
-db GROUND ; species type 2
+db NORMAL ; species type 2
 db CAP_HARD_MIN ; catch rate
 db 163 ; base exp yield
 INCBIN "pic/bmon/sandslash.pic",0,1 ; 66, sprite dimensions

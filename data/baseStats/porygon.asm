@@ -1,11 +1,11 @@
 db DEX_PORYGON ; pokedex id
-db 65 ; base hp
-db 60 ; base attack
-db 70 ; base defense
-db 40 ; base speed
-db 75 ; base special
+db 85 ; base hp
+db 80 ; base attack
+db 90 ; base defense
+db 60 ; base speed
+db 105 ; base special
 db ELECTRIC ; species type 1
-db ELECTRIC ; species type 2
+db NORMAL ; species type 2
 db CAP_MID_PLUS ; catch rate
 db 130 ; base exp yield
 INCBIN "pic/bmon/porygon.pic",0,1 ; 66, sprite dimensions

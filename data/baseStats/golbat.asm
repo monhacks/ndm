@@ -4,8 +4,8 @@ db 80 ; base attack
 db 70 ; base defense
 db 90 ; base speed
 db 75 ; base special
-db POISON ; species type 1
-db FLYING ; species type 2
+db FLYING ; species type 1
+db BUG ; species type 2
 db CAP_MID_PLUS ; catch rate
 db 171 ; base exp yield
 INCBIN "pic/bmon/golbat.pic",0,1 ; 77, sprite dimensions

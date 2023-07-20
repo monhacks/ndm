@@ -2,8 +2,8 @@ Route16_Object:
 	db $43 ; border block
 
 	db 3 ; warps
-	warp 71, 10, 1, ROUTE_16_GATE_1F
-	warp 76, 10, 2, ROUTE_16_GATE_1F
+	warp 71, 10, 0, ROUTE_16_GATE_1F
+	warp 76, 10, 1, ROUTE_16_GATE_1F
 	warp  0,  8, 1, VIRIDIAN_SCHOOL_HOUSE
 
 	db 3 ; signs

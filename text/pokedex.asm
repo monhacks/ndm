@@ -195,13 +195,13 @@ _LaprasDexEntry::
 	dex
 
 _ArcanineDexEntry::
-	text "A #MON that"
-	next "has been admired"
-	next "since the past"
+	text "Evolved via FIRE"
+	next "STONE exposure. I"
+	next "had only heard of"
 
-	page "for its beauty."
-	next "It runs agilely"
-	next "as if on wings"
+	page "this #MON in"
+	next "legends that tell"
+	next "of its land speed"
 	dex
 
 _MewDexEntry::
@@ -311,17 +311,17 @@ _VisigoDexEntry::
 
 	page "of greed. Whenever"
 	next "it eats, it only"
-	next "gets hungrier."
+	next "gets hungrier"
 	dex
 
 _GrowlitheDexEntry::
-	text "Very protective"
-	next "of its territory."
-	next "It will bark and"
+	text "Very friendly to"
+	next "people when tamed."
+	next "Will bark and bite"
 
-	page "bite to repel"
-	next "intruders from"
-	next "its space"
+	page "like a dog. Maybe"
+	next "this is a learned"
+	next "behavior"
 	dex
 
 _OnixDexEntry::
@@ -415,23 +415,23 @@ _MrMimeDexEntry::
 	dex
 
 _HitmonleeDexEntry::
-	text "When in a hurry,"
-	next "its legs lengthen"
-	next "progressively."
+	text "Its leg tendons"
+	next "are very elastic,"
+	next "allowing great"
 
-	page "It runs smoothly"
-	next "with extra long,"
-	next "loping strides"
+	page "stretchiness. I've"
+	next "seen it kick 10"
+	next "times a second"
 	dex
 
 _HitmonchanDexEntry::
-	text "While apparently"
-	next "doing nothing, it"
-	next "fires punches in"
+	text "It likes to spend"
+	next "time with boxers,"
+	next "sparring and also"
 
-	page "lightning fast"
-	next "volleys that are"
-	next "impossible to see"
+	page "learning moves."
+	next "Eerily human for"
+	next "a #MON"
 	dex
 
 _ArbokDexEntry::
@@ -526,12 +526,12 @@ _KoffingDexEntry::
 
 _MankeyDexEntry::
 	text "Extremely quick to"
-	next "anger. It could"
-	next "be docile one"
+	next "anger, especially"
+	next "when food is near."
 
-	page "moment then"
-	next "thrashing away"
-	next "the next instant"
+	page "It thrashes about"
+	next "as if every morsal"
+	next "is life or death"
 	dex
 
 _SeelDexEntry::
@@ -665,13 +665,13 @@ _DittoDexEntry::
 	dex
 
 _MeowthDexEntry::
-	text "Adores circular"
-	next "objects. Wanders"
-	next "the streets on a"
+	text "Seems to sleep all"
+	next "day, only waking"
+	next "to look for shiny"
 
-	page "nightly basis to"
-	next "look for dropped"
-	next "loose change"
+	page "objects at night,"
+	next "which it then"
+	next "weaponizes"
 	dex
 
 _KrabbyDexEntry::
@@ -985,13 +985,13 @@ _DodrioDexEntry::
 	dex
 
 _PrimeapeDexEntry::
-	text "Always furious"
-	next "and tenacious to"
-	next "boot. It will not"
+	text "Where a MANKEY"
+	next "seems to stop"
+	next "fighting once"
 
-	page "abandon chasing"
-	next "its quarry until"
-	next "it is caught"
+	page "it gets what it"
+	next "wants, PRIMEAPE"
+	next "fights to a KO"
 	dex
 
 _DugtrioDexEntry::
@@ -1185,13 +1185,13 @@ _WeezingDexEntry::
 	dex
 
 _PersianDexEntry::
-	text "Although its fur"
-	next "has many admirers,"
-	next "it is tough to"
+	text "When unthreatened,"
+	next "it maintains a"
+	next "snobby posture."
 
-	page "raise as a pet"
-	next "because of its"
-	next "fickle meanness"
+	page "Its SLASH attack"
+	next "is legendary for"
+	next "breaking defenses"
 	dex
 
 _MarowakDexEntry::
@@ -1315,23 +1315,23 @@ _SeakingDexEntry::
 	dex
 
 _PonytaDexEntry::
-	text "Its hooves are 10"
-	next "times harder than"
-	next "diamonds. It can"
+	text "A skilled jumper,"
+	next "able to clear most"
+	next "buildings with one"
 
-	page "trample anything"
-	next "completely flat"
-	next "in little time"
+	page "leap. Its hind has"
+	next "tremendous kicking"
+	next "power"
 	dex
 
 _RapidashDexEntry::
-	text "Very competitive,"
-	next "this #MON will"
-	next "chase anything"
+	text "Very competitive."
+	next "I've seen it race"
+	next "past cars on"
 
-	page "that moves fast"
-	next "in the hopes of"
-	next "racing it"
+	page "the road. Nothing"
+	next "seems to be able"
+	next "to match its pace"
 	dex
 
 _RattataDexEntry:: ;mod

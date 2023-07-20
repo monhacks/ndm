@@ -108,32 +108,36 @@ _ViridianCityText_1920a::
 	done
 
 _ViridianCityText_1920f::
-	text "Kids these days"
-	line "don't know how"
-	cont "it's done. Back"
-	cont "in my day, you"
-	cont "just threw a"
-	cont "#BALL and"
-	cont "yelled ″BE UP!″"
+	text "You don't always"
+	line "have to weaken"
+	cont "a #MON before"
+	cont "throwing a ball."
 	
-	para "I caught so many"
-	line "#MON that way."	
+	para "And even if you do,"
+	line "don't overdo it!"
+	cont "You can't capture"
+	cont "a #MON that's"
+	cont "been knocked out!"
 	
 	para "Don't believe me?"
 	line "I'll show you!"
 	done
 
 _ViridianCityText_19214::
-	text "Time is money..."
-	line "Go along then."
+	text "Well I guess"
+	line "you will just be"
+	cont "bad at catching"
+	cont "#MON, then!"
+	
+	para "Not my problem!"
 	done
 
 _ViridianCityText_19219::
-	text "But, if you're a"
-	line "coward, you can"
-	cont "weaken the wild"
-	cont "#MON before"
-	cont "throwing a BALL."
+	text "Never hurts to"
+	line "yell ″BE UP!″,"
+	cont "either. But maybe"
+	cont "that's an urban"
+	cont "legend."
 	
 	done
 
@@ -180,6 +184,8 @@ _ViridianCityText14::
 
 _ViridianCityText16::
 	text "VIRIDIAN BEACH"
-	para "ROUTE 16"
-	line "to CELADON CITY"
+	line "of CELADON BAY"
+	
+	para "Sea route to"
+	line "CELADON CITY"
 	done

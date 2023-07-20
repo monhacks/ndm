@@ -215,6 +215,27 @@ _CeladonGymAfterBattleText1::
 	text "uu afterbattle1"
 	done
 
+_CeladonGymMutateGuyNo::
+	text "... ... ..."
+	para "Oh, hey, didn't"
+	line "see you there."
+	
+	para "MAXINE has me"
+	line "on some important"
+	cont "lab work. Sorry."
+	
+	para "I have to watch"
+	line "carefully for any"
+	cont "MUTATIONS that"
+	cont "occur in our"
+	cont "#MON."
+	done
+
+_CeladonGymMutateGuyYes::
+	text "not yet done"
+	prompt
+
+	
 _CeladonGymWelcomeHere::
 	text "Welcome to the"
 	line "CELADON CITY GYM."

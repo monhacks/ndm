@@ -4,7 +4,7 @@ SetLastBlackoutMap:
 ; Safari rest houses don't count.
 
 	push hl
-	ld hl, SafariZoneRestHouses
+	ld hl, MapsWithHealsThatDontResetBlackout
 	ld a, [wCurMap]
 	ld b, a
 .loop
@@ -22,8 +22,8 @@ SetLastBlackoutMap:
 	pop hl
 	ret
 
-SafariZoneRestHouses:
-	db SAFARI_ZONE_WEST_REST_HOUSE
+MapsWithHealsThatDontResetBlackout:
+	db ROUTE_2
 	db SAFARI_ZONE_EAST_REST_HOUSE
 	db SAFARI_ZONE_NORTH_REST_HOUSE
 	db -1

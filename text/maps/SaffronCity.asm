@@ -82,8 +82,8 @@ _SaffronCityText10::
 	done
 
 _SaffronCityText11::
-	text "Some #MON"
-	line "have better houses"
+	text "Some #MON have"
+	line "better houses"
 	cont "than people!"
 	
 	para "I've never seen"

@@ -1,21 +1,26 @@
 _CinnabarPokecenterText2::
-	text "You can cancel"
-	line "evolution."
+	text "H... how does"
+	line "it work?"
 
-	para "When a #MON is"
-	line "evolving, you can"
-	cont "stop it and leave"
-	cont "it the way it is."
+	para "I've watched this"
+	line "healing machine"
+	cont "for hours, it's"
+	cont "like magic."
 	done
 
 _CinnabarPokecenterText3::
 	text "Do you have any"
 	line "friends?"
 
-	para "#MON you get"
-	line "in trades grow"
-	cont "very quickly."
+	para "No? Oh, you"
+	line "must have just"
+	cont "moved here."
 
-	para "I think it's"
-	line "worth a try!"
+	para "That's okay, you"
+	line "can make some"
+	cont "new friends, too!"
+	
+	para "Me?"
+	line "Oh, uh... "
+	cont "kinda busy, sorry!"
 	done

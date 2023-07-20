@@ -5,7 +5,7 @@ db 70 ; base defense
 db 40 ; base speed
 db 85 ; base special
 db GRASS ; species type 1
-db POISON ; species type 2
+db GROUND ; species type 2
 db CAP_MID ; catch rate
 db 132 ; base exp yield
 INCBIN "pic/bmon/gloom.pic",0,1 ; 66, sprite dimensions

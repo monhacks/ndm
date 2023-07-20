@@ -181,6 +181,8 @@ AttackAnimationPointers:
 	dw StampedeAnim
 	dw ForkingBoltAnim
 	dw SummonSwarmAnim
+	dw ShatterAnim
+	dw VenomSkewerAnim
 	;END MODS
 	dw StruggleAnim ; struggle must go last
 	dw ShowPicAnim
@@ -367,6 +369,7 @@ HeatButtAnim:
 	db $46,$1C,$05
 	db $FF
 
+VenomSkewerAnim:
 HornAttackAnim:
 	db $06,$1D,$45
 	db $46,$FF,$05
@@ -414,6 +417,7 @@ ThrashAnim:
 	db $46,$24,$04
 	db $FF
 
+ShatterAnim:
 DoubleEdgeAnim:
 	db SE_LIGHT_SCREEN_PALETTE, $48
 	db $06,$FF,$2D

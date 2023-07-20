@@ -8,8 +8,8 @@ ViridianCity_Object:
 	warp 30, 29, 0, VIRIDIAN_NICKNAME_HOUSE
 	warp 32, 7, 0, VIRIDIAN_GYM
 	warp 4, 31, 0, BLUES_HOUSE
-	warp 36,  3, 0, POKEMON_TOWER_1F  ;  DEBUG WRONG WARP
-	warp 37,  3, 1, POKEMON_TOWER_1F  ;  DEBUG WRONG WARP
+	warp 34,  5, 1, POKEMON_TOWER_1F  ;  side forest 1 
+	warp 35,  5, 1, POKEMON_TOWER_1F  ;  side forest 1 
 
 	db 7 ; signs
 	sign 17, 17, 8 ; ViridianCityText8
@@ -36,5 +36,5 @@ ViridianCity_Object:
 	warp_to 30, 29, VIRIDIAN_CITY_WIDTH ; VIRIDIAN_NICKNAME_HOUSE ; rt1 cave
 	warp_to 32,  7, VIRIDIAN_CITY_WIDTH ; VIRIDIAN_GYM
 	warp_to 4, 31, VIRIDIAN_CITY_WIDTH ; BLUES_HOUSE / mod dungeon
-	warp_to 36,  3, VIRIDIAN_CITY_WIDTH ; BLUES_HOUSE / mod dungeon
-	warp_to 37,  3, VIRIDIAN_CITY_WIDTH ; BLUES_HOUSE / mod dungeon
+	warp_to 34,  5, VIRIDIAN_CITY_WIDTH ; BLUES_HOUSE / mod dungeon
+	warp_to 35,  5, VIRIDIAN_CITY_WIDTH ; side forest 1 

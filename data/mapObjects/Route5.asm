@@ -1,10 +1,12 @@
 Route5_Object:
 	db $f ; border block
 
-	db 3 ; warps
+	db 5 ; warps
 	warp 10, 29, 2, ROUTE_5_GATE
 	warp 11, 29, 3, ROUTE_5_GATE
 	warp 10, 33, 0, ROUTE_5_GATE
+	warp 0, 9, 1, POKEMON_TOWER_3F
+	warp 0, 10, 1, POKEMON_TOWER_3F
 
 	db 2 ; signs
 	sign 9, 29, 4 ; south sign (text4)
@@ -19,3 +21,4 @@ Route5_Object:
 	warp_to 10, 29, ROUTE_5_WIDTH ; ROUTE_5_GATE
 	warp_to 11, 29, ROUTE_5_WIDTH ; ROUTE_5_GATE
 	warp_to 10, 33, ROUTE_5_WIDTH ; ROUTE_5_GATE
+	warp_to 1, 11, ROUTE_5_WIDTH ; ROUTE_5_GATE - to forest maze

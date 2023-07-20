@@ -17,7 +17,7 @@ VermilionCity_Object:
 
 	db 7 ; objects
 	object SPRITE_FOULARD_WOMAN, 21,  7, WALK, 2, 1 ; person
-	object SPRITE_GAMBLER, 36, 19, STAY, DOWN, 2 ; person
+	object SPRITE_GAMBLER, 16, 19, STAY, DOWN, 2 ; person
 	object SPRITE_SAILOR, 10,  8, WALK, 1, 3 ; person
 	object SPRITE_GAMBLER,  7, 13, STAY, NONE, 4 ; person
 	object SPRITE_ERIKA,  6, 13, WALK, 1, 5 ; person

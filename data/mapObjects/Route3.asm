@@ -1,8 +1,10 @@
 Route3_Object:
 	db $2c ; border block
 
-	db 1 ; warps
+	db 3 ; warps
 	warp 64, 7, 0, CERULEAN_TRADE_HOUSE
+	warp 36, 12, 2, POKEMON_TOWER_2F
+	warp 37, 12, 2, POKEMON_TOWER_2F
 
 	db 2 ; signs
 	sign 59, 9, 10 ; Route3Text10
@@ -24,4 +26,5 @@ Route3_Object:
 	;YOUNGSTER 1, 2
 
 	warp_to 64, 7, ROUTE_3_WIDTH
+	warp_to 36, 11, ROUTE_3_WIDTH
 	
